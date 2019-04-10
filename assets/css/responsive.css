@@ -317,9 +317,13 @@ margin: 90px 0 0 -50px;
 	.header-top-menu ul {
 		text-align: center;
 	}
+	
+	/*2019.04.08　削除
 	.header-top-menu ul li:first-child {
 		display: none
 	}
+	*/
+
 	.site-logo {
 		width: 50%;
 		margin: 20px 0
@@ -620,6 +624,7 @@ margin: 90px 0 0 -50px;
 	}
 
 /* 2019.02.05追記 メディアプレーヤーレスポンシブ対応 */
+/* 2019.04.08追記 メディアプレーヤーレスポンシブ対応 */
 
 #myModal h5 {
 font-size: 1rem;
@@ -632,13 +637,13 @@ margin-right: initial;
 margin-left: initial;
 }
 
-#myModal .video-player-button .btn {
+.video-player-button .btn {
 font-size: 0.1rem;
 }
 
-#myModal .video-player-button .btn-group,
-#myModal .video-player-comment-button,
-#myModal .video-player-comment {
+.video-player-button .btn-group,
+.video-player-comment-button,
+.video-player-comment {
 padding: 0.5rem 0;
 }
 

@@ -420,7 +420,7 @@ li {
 ==================================================*/
 
 .filmoja-breadcrumb-area {
-	background: url(../img/bgs1-1.jpg) no-repeat scroll 0 0/cover
+	background: url(../img/bgs1-4.jpg) no-repeat scroll 0 0/cover
 }
 
 .breadcrumb-box h2 {
@@ -467,9 +467,10 @@ li {
 	color: #ccc;
 }
 
+/*2019.04.08 60px->80px修正*/
 @media (max-width: 478px) {
 .breadcrumb-box ul>li+li:before {
-padding: 0 60px;
+padding: 0 80px;
 } }
 
 /*================================================
@@ -992,8 +993,9 @@ padding: 0 60px;
 	border-radius: 25px;
 }
 
+/*2019.04.08 5px->3pxに変更*/
 .popup-youtube i {
-	margin-left: 5px
+	margin-left: 3px
 }
 
 
@@ -1207,7 +1209,9 @@ padding: 0 60px;
 	color: #111;
 }
 
-.movie-details-thumbs {
+/* 2019.04.08 追記*/
+.movie-details-thumbs,
+.details-movie-title {
 	margin-top: 10px;
 }
 
@@ -2262,12 +2266,6 @@ ul.company-desc-list li i {
 	transition: all 0.0s ease 0s;
 }
 
-/*==2019.04.06 追記==*/
-.header-top-menu {
-	padding: 4px 0px;
-}
-
-
 .top-action a:hover {
 	border: 1px solid #fbbd61;
 	background-image: -webkit-linear-gradient(left, #fbbd61, #ec7532);
@@ -2365,7 +2363,21 @@ ul.company-desc-list li i {
 	top: 25%;
 }
 
+/*2019.04.08 追記*/
+.cp_menu {
+	overflow-y: auto;
+	height: 240px;
+}
 
+.player_account_menu {
+	overflow-y: auto;
+	height: 550px;
+}
+
+.staff_account_menu {
+	overflow-y: auto;
+	height: 90px;
+}
 
 /*================================================
 15 - CHECKBOX CSS
@@ -2843,8 +2855,10 @@ ul.company-desc-list li i {
 	margin-top: 5px;
 }
 
+/*2019.04.08 追記*/
 .details-time-left {
-	color: #eee;
+	margin-top: 10px;
+	color: #111;
 	font-family: 'Roboto Condensed', sans-serif;
 	letter-spacing: .5px;
 }
@@ -3741,41 +3755,47 @@ ul.company-desc-list li i {
 実際のシステム組み込みの際には
 #myModal -> #modalBoxPreview
 へ変更すれば機能すると思います。
+
+<2019.04.08　追加>
+モーダルの廃止に伴い#myModalを削除
+overflow: auto等を追記
 ==================================================*/
 
 #myModal .row {
 margin-bottom: 15px;
 }
 
-#myModal .video-player-video,
-#myModal .video-player-button,
-#myModal .video-player-thumbnail,
-#myModal .video-player-time,
-#myModal .video-player-comment-button,
-#myModal .video-player-comment {
+.video-player-video,
+.video-player-button,
+.video-player-thumbnail,
+.video-player-time,
+.video-player-comment-button,
+.video-player-comment {
 padding: 1rem 0;
 }
 
-#myModal .video-palyer-title {
+.video-palyer-title {
 padding-bottom: 1rem;
 }
 
-#myModal .video-palyer-currenttime {
+.video-palyer-currenttime {
 font-weight: bold;
 font-size: 20px;
 }
 
-#myModal #commentBox {
+#commentBox {
 padding: 5% 3%;
 border-radius: 6px;
 border: 1px solid lightgray;
+overflow-y: auto;
+height: 500px;
 }
 
-#myModal #commentBox a {
+#commentBox a {
 font-size: 18px;
 }
 
-#myModal #commentBox .comment {
+#commentBox .comment {
 color:default;
 font-size: default;
 display: default;

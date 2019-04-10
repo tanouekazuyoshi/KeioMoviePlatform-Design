@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ja">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- Title -->
+      <title>KEIO MOVIE PLATFORM</title>
+      <!-- Favicon -->
+      <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png">
+      <!--Bootstrap css-->
+      <link rel="stylesheet" href="assets/css/bootstrap.css">
+      <!--Font Awesome css-->
+      <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+      <!--Magnific css-->
+      <link rel="stylesheet" href="assets/css/magnific-popup.css">
+      <!--Owl-Carousel css-->
+      <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+      <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+      <!--Animate css-->
+      <link rel="stylesheet" href="assets/css/animate.min.css">
+      <!--Slicknav css-->
+      <link rel="stylesheet" href="assets/css/slicknav.min.css">
+      <!--Site Main Style css-->
+      <link rel="stylesheet" href="assets/css/style.css">
+      <!--ext.js 2019.02.05追記-->
+      <link rel="stylesheet" href="ext/css/ext.css">
+      <!--Responsive css-->
+      <link rel="stylesheet" href="assets/css/responsive.css">
+   </head>
+   <body>
+       
+       
+      <!-- Header Area Start -->
+      <header class="filmoja-header-area">
+         <!-- Header Top Area Start -->
+         <div class="header-top-area">
+            <div class="container">
+               <div class="row">
+                  <div class="col-lg-6 col-sm-4">
+                     <div class="header-top-social">
+                        <div class="top-action">
+                           <a href="#" class="popup-youtube"><i class="fa fa-edit"></i> このページを編集する</a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-6 col-sm-8">
+                     <div class="header-top-menu">
+                        <ul>
+                           <li><div class="top-action"><a href="#" class="popup-youtube"><i class="fa fa-cloud-upload"></i> アップロード</a></div></li>
+                           <li><div class="top-action"><a href="#" class="popup-youtube"><i class="fa fa-user-plus"></i> 招待</a></div></li>
+                           <li><div class="top-action"><a href="#" class="popup-youtube"><i class="fa fa-user"></i> </a></div></li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- Header Top Area End -->
+            
+         <!-- Main Header Area Start -->
+         <div class="main-header-area">
+            <div class="container">
+               <div class="row">
+                  <div class="col-lg-2">
+                     <div class="site-logo">
+                        <a href="#">
+                           <img src="assets/img/logo.png" alt="keiologo" />
+                        </a>
+                     </div>
+                     <!-- Responsive Menu Start -->
+                     <div class="filmoja-responsive-menu"></div>
+                     <!-- Responsive Menu End -->
+                  </div>
+                  <div class="col-lg-10">
+                     <div class="mainmenu">
+                        <nav>
+                           <ul id="responsive_navigation">
+                              <li><a href="#">ホーム</a></li>
+                              <li><a href="#">アーカイブ</a></li>
+                              <li><a href="#">アカウント</a></li>
+                              <li><a href="#">ログアウト</a></li>
+                           </ul>
+                        </nav>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- Main Header Area End -->
+            
+      </header>
+      <!-- Header Area End -->
+       
+      <!-- Movie Details Page Start -->
+      <section class="filmoja-movie-details-page section_70">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-9">
+                  <div class="movie-grid-layout">
+                     <div class="single-movie-list-left">
+                        <img src="assets/img/movie1280.jpg" alt="movie">
+                        <!-- ここに動画を飛ばす
+                           <div class="video-player-video">
+                              <div id="preview-contents"></div>
+                           </div>
+                        -->
+                     </div>
+                     <div class="single-movie-list-right">
+                        <div class="video-player-button">
+                           <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                              <label class="btn btn-outline-warning"><input type="radio" aria-hidden="true" onclick="playBackChange(0.5) "
+                                    name="options" id="option6" autocomplete="off">x0.5</label>
+                              <label class="btn btn-outline-warning"><input type="radio" aria-hidden="true" onclick="playBackChange(0.2) "
+                                    name="options" id="option5" autocomplete="off">x0.2</label>
+                              <label class="btn btn-outline-warning"><input type="radio" aria-hidden="true" onclick="playBackChange(0.1) "
+                                    name="options" id="option4" autocomplete="off">x0.1</label>
+                              <label class="btn btn-outline-warning active"><input type="radio" aria-hidden="true"
+                                    onclick="playBackChange(1) " name="options" id="option1" autocomplete="off" checked>x1</label>
+                              <label class="btn btn-outline-warning"><input type="radio" aria-hidden="true" onclick="playBackChange(2) "
+                                    name="options" id="option2" autocomplete="off">x2</label>
+                              <label class="btn btn-outline-warning"><input type="radio" aria-hidden="true" onclick="playBackChange(5) "
+                                    name="options" id="option3" autocomplete="off">x5</label>
+                           </div>
+                           <div class="btn-group">
+                              <button class="btn btn-outline-info" aria-hidden="true" onclick="changeScene(-1) "><i
+                                    class="fa fa-rotate-left">-1</i></button>
+                              <button class="btn btn-outline-info" aria-hidden="true" onclick="changeScene(-5) "><i
+                                    class="fa fa-rotate-left">-5</i></button>
+                              <button class="btn btn-outline-success" aria-hidden="true" onclick="changeScene(1) "><i
+                                    class="fa fa-rotate-right">+1</i></button>
+                              <button class="btn btn-outline-success" aria-hidden="true" onclick="changeScene(5) "><i
+                                    class="fa fa-rotate-right">+5</i></button>
+                           </div>
+                           <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                              <label class="btn btn-outline-secondary active"><input type="radio" aria-hidden="true"
+                                    onclick="changeBitRate('mobile') " name="options" id="option6" autocomplete="off"
+                                    checked><i class="fa fa-mobile"></i></label>
+                              <label class="btn btn-outline-secondary"><input type="radio" aria-hidden="true" onclick="changeBitRate('pc') "
+                                    name="options" id="option5" autocomplete="off"><i class="fa fa-television"></i></label>
+                           </div>
+                        </div>
+
+                        <div class="details-movie-title"><h5>リーグ戦4回戦慶應義塾大学-日本体育大学</h5></div>
+                        <p class="details-time-left"><i class="fa fa-clock-o"></i>2 時間 14 分 - 12 分 left</p>
+                        <div class="movie-details-thumbs">
+                           <ul>
+                              <li><a href="#"><i class="fa fa-thumbs-up"></i>256</a></li>
+                              <li><a href="#"><i class="fa fa-eye"></i>45</a></li>
+                           </ul>
+                        </div>
+                        <div class="movie-list-info">
+                           <div class="list-info-left">
+                              <p>アップロード: <span>タノウエ</span></p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-3">
+                  <div class="video-player-time">
+                     <span class="video-palyer-currenttime"><span id="currentTime">00:00:00</span></span>
+                  </div>
+                  <div class="video-player-comment-button">
+                     <button class="btn btn-outline-primary btn-lg" aria-hidden="true" onclick="commentBoxTimeNice() "><i
+                           class="fa fa-thumbs-o-up"></i></button>
+                     <button class="btn btn-outline-primary btn-lg" aria-hidden="true" onclick="commentBoxTime()"><i
+                           class="fa fa-comments-o"></i></button>
+                  </div>
+                  <div class="video-player-comment">
+                     <div class="video-palyer-title">コメント・いいね</div>
+                     <div id="commentBox"></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- Movie Details Page End -->
+       
+       
+   <!-- Footer Area Start -->
+   <footer class="filmoja-footer-area">
+      <div class="footer-top-area section_70">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-3 col-sm-6">
+                  <div class="single-footer-widget">
+                     <h3>quick links</h3>
+                     <ul>
+                        <li><a href="#"><i class="fa fa-angle-double-right"></i>about MOVIE PLATFORM</a></li>
+                        <li><a href="#"><i class="fa fa-angle-double-right"></i>Terms & Conditions</a></li>
+                        <li><a href="#"><i class="fa fa-angle-double-right"></i>Privacy policy</a></li>
+                     </ul>
+                  </div>
+               </div>
+
+            </div>
+         </div>
+      </div>
+      <div class="copyright-area">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-12">
+                  <div class="copyright-box">
+                     <p>2019 © Endorphins. All rights reserved</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </footer>
+   <!-- Footer Area End -->
+       
+       
+      <!--Jquery js-->
+      <script src="assets/js/jquery-3.0.0.min.js"></script>
+      <!--Jquery-ui js-->
+      <script src="assets/js/jquery-ui.min.js"></script>
+      <!--Bootstrap js-->
+      <script src="assets/js/bootstrap.min.js"></script>
+      <!--Owl-Carousel js-->
+      <script src="assets/js/owl.carousel.min.js"></script>
+      <!--SlickNav js-->
+      <script src="assets/js/jquery.slicknav.min.js"></script>
+      <!--Magnific js-->
+      <script src="assets/js/jquery.magnific-popup.min.js"></script>
+      <!--Main js-->
+      <script src="assets/js/main.js"></script>
+   </body>
+</html>
+
