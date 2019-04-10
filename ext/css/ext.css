@@ -1,0 +1,101 @@
+.modal-dialog {
+	max-width: none;
+	width: 80%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	min-height: 100%;
+	margin: auto;
+	pointer-events: none;
+}
+
+.modal {
+	z-index: 99999;
+}
+
+.queueStatus {
+	width: 95%;
+}
+
+.queueStatus thead td {
+	background-color: black;
+	border: 1px dimgray solid;
+	padding-left: 3px;
+	color: white;
+	font-size: 12px;
+}
+
+.queueStatusRequestDate {
+	width: 120px;
+	background-color: white;
+	border: 1px dimgray solid;
+	padding-left: 3px;
+	color: black;
+	font-size: 12px;
+}
+
+.queueStatusRequestType {
+	width: 80px;
+	background-color: white;
+	border: 1px dimgray solid;
+	padding-left: 3px;
+	color: black;
+	font-size: 12px;
+}
+
+.queueStatusUploadName {
+	width: 120px;
+	background-color: white;
+	border: 1px dimgray solid;
+	padding-left: 3px;
+	color: black;
+	font-size: 12px;
+}
+
+.queueStatusUploadContents {
+	background-color: white;
+	border: 1px dimgray solid;
+	padding-left: 3px;
+	color: black;
+	font-size: 12px;
+}
+
+.queueStatusOriginalFileName {
+	width: 160px;
+	background-color: white;
+	border: 1px dimgray solid;
+	padding-left: 3px;
+	color: black;
+	font-size: 12px;
+}
+
+.queueStatusProcStatus {
+	width: 60px;
+	background-color: white;
+	border: 1px dimgray solid;
+	padding-left: 3px;
+	color: black;
+	font-size: 12px;
+}
+
+.queueStatusMessage {
+	color: black;
+}
+
+#infoBox {
+    position: fixed;
+    top: 50px;
+    right: 50px;
+    font-size: 12px;
+    background: black;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    width: 250px;
+    padding: 10px;
+    text-align: center;
+    display: block;
+    border-radius: 10px;
+    border: 3px #ec7532 solid;
+    line-height: 16px;
+}
