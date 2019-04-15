@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!-- Title -->
+   <title>KEIO MOVIE PLATFORM</title>
+   <!-- Favicon -->
+   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png">
+   <!--Bootstrap css-->
+   <link rel="stylesheet" href="assets/css/bootstrap.css">
+   <!--Font Awesome css-->
+   <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+   <!--Magnific css-->
+   <link rel="stylesheet" href="assets/css/magnific-popup.css">
+   <!--Owl-Carousel css-->
+   <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+   <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+   <!--Animate css-->
+   <link rel="stylesheet" href="assets/css/animate.min.css">
+   <!--Slicknav css-->
+   <link rel="stylesheet" href="assets/css/slicknav.min.css">
+   <!--Site Main Style css-->
+   <link rel="stylesheet" href="assets/css/style.css">
+   <!--ext.js 2019.02.05追記-->
+   <link rel="stylesheet" href="ext/css/ext.css">
+   <!--Responsive css-->
+   <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body>
+
+
+   <!-- Header Area Start -->
+   <header class="filmoja-header-area">
+      <!-- Header Top Area Start -->
+      <div class="header-top-area">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-6 col-sm-4">
+                  <div class="header-top-social">
+                     <div class="top-action">
+                        <!--<a href="#" class="popup-youtube"><i class="fa fa-edit"></i> このページを編集する</a>-->
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-6 col-sm-8">
+                  <div class="header-top-menu">
+                     <ul>
+                        <li>
+                           <div class="top-action"><a href="#" data-toggle="modal" data-target="#myModal"><i
+                                    class="fa fa-cloud-upload"></i> アップロード</a></div>
+                        </li>
+                        <li>
+                           <div class="top-action"><a href="#" data-toggle="modal" data-target="#inviteModal"><i
+                                    class="fa fa-user-plus"></i>
+                                 招待</a></div>
+                        </li>
+                        <li>
+                           <div class="top-action"><a href="keio-accounts-detail.html"><i class="fa fa-user"></i></a>
+                           </div>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- Header Top Area End -->
+      <!-- Main Header Area Start -->
+      <div class="main-header-area">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-2">
+                  <div class="site-logo">
+                     <a href="keio-home.html">
+                        <img src="assets/img/logo.png" alt="keiologo" />
+                     </a>
+                  </div>
+                  <!-- Responsive Menu Start -->
+                  <div class="filmoja-responsive-menu"></div>
+                  <!-- Responsive Menu End -->
+               </div>
+               <div class="col-lg-10">
+                  <div class="mainmenu">
+                     <nav>
+                        <ul id="responsive_navigation">
+                           <li><a href="keio-home.html">ホーム</a></li>
+                           <li><a href="keio-archives.html">アーカイブ</a></li>
+                           <li><a href="keio-accounts.html">アカウント</a></li>
+                           <li><a href="keio-top.html">ログアウト</a></li>
+                        </ul>
+                     </nav>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- Main Header Area End -->
+
+   </header>
+   <!-- Header Area End -->
+
+   <!-- Movie Details Page Start -->
+   <section class="filmoja-movie-details-page section_70">
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-9">
+               <div class="movie-grid-layout">
+                  <div class="single-movie-list-left">
+                     <img src="assets/img/movie1280.jpg" alt="movie">
+                     <!-- ここに動画を飛ばす
+                           <div class="video-player-video">
+                              <div id="preview-contents"></div>
+                           </div>
+                        -->
+                  </div>
+                  <div class="single-movie-list-right">
+                     <div class="video-player-button">
+                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                           <label class="btn btn-outline-warning"><input type="radio" aria-hidden="true"
+                                 onclick="playBackChange(0.5) " name="options" id="option6"
+                                 autocomplete="off">x0.5</label>
+                           <label class="btn btn-outline-warning"><input type="radio" aria-hidden="true"
+                                 onclick="playBackChange(0.2) " name="options" id="option5"
+                                 autocomplete="off">x0.2</label>
+                           <label class="btn btn-outline-warning"><input type="radio" aria-hidden="true"
+                                 onclick="playBackChange(0.1) " name="options" id="option4"
+                                 autocomplete="off">x0.1</label>
+                           <label class="btn btn-outline-warning active"><input type="radio" aria-hidden="true"
+                                 onclick="playBackChange(1) " name="options" id="option1" autocomplete="off"
+                                 checked>x1</label>
+                           <label class="btn btn-outline-warning"><input type="radio" aria-hidden="true"
+                                 onclick="playBackChange(2) " name="options" id="option2" autocomplete="off">x2</label>
+                           <label class="btn btn-outline-warning"><input type="radio" aria-hidden="true"
+                                 onclick="playBackChange(5) " name="options" id="option3" autocomplete="off">x5</label>
+                        </div>
+                        <div class="btn-group">
+                           <button class="btn btn-outline-info" aria-hidden="true" onclick="changeScene(-1) "><i
+                                 class="fa fa-rotate-left">-1</i></button>
+                           <button class="btn btn-outline-info" aria-hidden="true" onclick="changeScene(-5) "><i
+                                 class="fa fa-rotate-left">-5</i></button>
+                           <button class="btn btn-outline-success" aria-hidden="true" onclick="changeScene(1) "><i
+                                 class="fa fa-rotate-right">+1</i></button>
+                           <button class="btn btn-outline-success" aria-hidden="true" onclick="changeScene(5) "><i
+                                 class="fa fa-rotate-right">+5</i></button>
+                        </div>
+                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                           <label class="btn btn-outline-secondary active"><input type="radio" aria-hidden="true"
+                                 onclick="changeBitRate('mobile') " name="options" id="option6" autocomplete="off"
+                                 checked><i class="fa fa-mobile"></i></label>
+                           <label class="btn btn-outline-secondary"><input type="radio" aria-hidden="true"
+                                 onclick="changeBitRate('pc') " name="options" id="option5" autocomplete="off"><i
+                                 class="fa fa-television"></i></label>
+                        </div>
+                     </div>
+
+                     <div class="details-movie-title">
+                        <h5>リーグ戦4回戦慶應義塾大学-日本体育大学</h5>
+                     </div>
+                     <p class="details-time-left"><i class="fa fa-clock-o"></i>2 時間 14 分 - 12 分 left</p>
+                     <div class="movie-details-thumbs">
+                        <ul>
+                           <li><a href="#"><i class="fa fa-thumbs-up"></i>256</a></li>
+                           <li><a href="#"><i class="fa fa-eye"></i>45</a></li>
+                        </ul>
+                     </div>
+                     <div class="movie-list-info">
+                        <div class="list-info-left">
+                           <div class="row movie-single-person">
+                              <div class="person-picture">
+                                 <a><img src="assets/img/user-icon.jpg" alt="top movie"></a>
+                              </div>
+                              <div class="person-name">
+                                 <p>田上和佳<span class="person-data">2019.04.12</span></p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-lg-3">
+               <div class="video-player-time">
+                  <span class="video-palyer-currenttime"><span id="currentTime">00:00:00</span></span>
+               </div>
+               <div class="video-player-comment-button">
+                  <button class="btn btn-outline-primary btn-lg" aria-hidden="true" onclick="commentBoxTimeNice()"><i
+                        class="fa fa-thumbs-o-up"></i></button>
+                  <button class="btn btn-outline-primary btn-lg" aria-hidden="true" onclick="commentBoxTime()"
+                     data-toggle="modal" data-target="#commentModal"><i class="fa fa-comments-o"></i></button>
+               </div>
+               <div class="video-player-comment">
+                  <div class="video-palyer-title">コメント・いいね</div>
+                  <div id="commentBox">
+                     <div class="commentBox-single">
+                        <div class="commentBox-time">
+                           <span id="" class="">00:03:30</span>
+                        </div>
+                        <a href="#">
+                           <div class="row comment-person">
+                              <div class="col-lg-3 comment-picture">
+                                 <img src="assets/img/user-icon.jpg" alt="top movie">
+                              </div>
+                              <div class="col-lg-9">
+                                 <div class="person-name">
+                                    <p>田上和佳</p>
+                                 </div>
+                                 <div class="person-reaction">
+                                    <p><i class="fa fa-thumbs-o-up"></i>いいね！</p>
+                                 </div>
+                              </div>
+                           </div>
+                        </a>
+                     </div>
+                     <div class="commentBox-single">
+                        <div class="commentBox-time">
+                           <span id="" class="">00:02:30</span>
+                        </div>
+                        <a href="#">
+                           <div class="row comment-person">
+                              <div class="col-lg-3 comment-picture">
+                                 <img src="assets/img/user-icon.jpg" alt="top movie">
+                              </div>
+                              <div class="col-lg-9">
+                                 <div class="person-name">
+                                    <p>田上和佳</p>
+                                 </div>
+                                 <div class="person-reaction">
+                                    <p>ナイスプレー！！</p>
+                                 </div>
+                              </div>
+                           </div>
+                        </a>
+                     </div>
+                     <div class="commentBox-single">
+                        <div class="commentBox-time">
+                           <span id="" class="">00:04:00</span>
+                        </div>
+                        <a href="#">
+                           <div class="row comment-person">
+                              <div class="col-lg-3 comment-picture">
+                                 <img src="assets/img/user-icon.jpg" alt="top movie">
+                              </div>
+                              <div class="col-lg-9">
+                                 <div class="person-name">
+                                    <p>田上和佳</p>
+                                 </div>
+                                 <div class="person-reaction">
+                                    <p><span id="commentBox-refer">@山﨑 純</span>ここのプレー、カットインは右じゃなくて左の方がいいね！</p>
+                                 </div>
+                              </div>
+                           </div>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- Movie Details Page End -->
+
+
+   <!-- Footer Area Start -->
+   <footer class="filmoja-footer-area">
+      <div class="footer-top-area section_70">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-3 col-sm-6">
+                  <div class="single-footer-widget">
+                     <h3>quick links</h3>
+                     <ul>
+                        <li><a href="#"><i class="fa fa-angle-double-right"></i>about MOVIE PLATFORM</a></li>
+                        <li><a href="#"><i class="fa fa-angle-double-right"></i>Terms & Conditions</a></li>
+                        <li><a href="#"><i class="fa fa-angle-double-right"></i>Privacy policy</a></li>
+                     </ul>
+                  </div>
+               </div>
+
+            </div>
+         </div>
+      </div>
+      <div class="copyright-area">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-12">
+                  <div class="copyright-box">
+                     <p>2019 © Endorphins. All rights reserved</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </footer>
+   <!-- Footer Area End -->
+
+   <!-- アカウント個別ページ編集モーダルのレイアウト設定 -->
+   <div class="modal fade" id="editAccountsDetailModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" data-keyboard="true" role="document">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title" id="editAccountsDetail">マイページの編集</h5>
+            </div>
+            <div class="modal-body">
+               <div class="container-fluid">
+                  <div class="row">
+                     <div class="col-lg-12">
+                        <div class="col-lg-9">
+                           <form>
+                              <div class="row">
+                                 <div class="col-lg-4">
+                                    <p>
+                                       <label for="editPageIsInfoOpen">公開設定</label>
+                                    </p>
+                                 </div>
+                                 <div class="col-lg-6">
+                                    <p>
+                                       <div class="switch">
+                                          <label class="switch__label">
+                                             <input type="checkbox" class="switch__input" id="editPageIsInfoOpen"
+                                                name="editPageIsInfoOpen" />
+                                             <span class="switch__content"></span>
+                                             <span class="switch__circle"></span>
+                                          </label>
+                                       </div>
+                                       <span id="editPageIsInfoOpenText">非公開</span>
+                                    </p>
+                                 </div>
+                                 <div class="col-lg-2">
+                                    <p>
+                                       <button class="btn btn-primary" id="confirmEditPageIsInfoOpen">保存する</label>
+                                    </p>
+                                 </div>
+                              </div>
+                              <div id="" class="row">
+                                 <div class="col-lg-4">
+                                    <p>
+                                       <label for="editPageTitle">名前</label>
+                                    </p>
+                                 </div>
+                                 <div class="col-lg-6">
+                                    <p>
+                                       <input type="text" name="editPageTitle" id="editPageTitle">
+                                    </p>
+                                 </div>
+                                 <div class="col-lg-2">
+                                    <p>
+                                       <button class="btn btn-primary" id="confirmEditPageTitle">保存する</label>
+                                    </p>
+                                 </div>
+                              </div>
+                              <div class="row">
+                                 <div class="col-lg-4">
+                                    <p>
+                                       <label for="editPageRole">役職</label>
+                                    </p>
+                                 </div>
+                                 <div class="col-lg-6">
+                                    <p>
+                                       <input type="text" name="editPagePosition" id="editPageRole">
+                                    </p>
+                                 </div>
+                                 <div class="col-lg-2">
+                                    <p>
+                                       <button class="btn btn-primary" id="confirmEditPageRole">保存する</label>
+                                    </p>
+                                 </div>
+                              </div>
+                              <div class="row">
+                                 <div class="col-lg-4">
+                                    <p>
+                                       <label for="editPageImage">画像</label>
+                                    </p>
+                                 </div>
+                                 <div class="col-lg-6">
+                                    <p>
+                                       <input type="file" name="editPageImage" id="editPageImage" accept="image/*">
+                                       <img src="assets/img/player270.jpg" id="editPageImagePreview" alt="">
+                                    </p>
+                                 </div>
+                                 <div class="col-lg-2">
+                                    <p>
+                                       <button class="btn btn-primary" id="confirmEditPageImage">保存する</label>
+                                    </p>
+                                 </div>
+                              </div>
+                              <div class="row">
+                                 <div class="col-lg-4">
+                                    <p><label for="editPageDetailValue_1">学年</label></p>
+                                 </div>
+                                 <div class="col-lg-6">
+                                    <p><input type="text" name="editPageDetailValue_1" id="editPageDetailValue_1"></p>
+                                 </div>
+                                 <div class="col-lg-2">
+                                    <p><button class="btn btn-primary" id="confirmEditPagegrade">保存する</label></p>
+                                 </div>
+                              </div>
+                              <div class="row">
+                                 <div class="col-lg-4">
+                                    <p><label for="editPageDetailValue_2">ポジション</label></p>
+                                 </div>
+                                 <div class="col-lg-6">
+                                    <p><input type="text" name="editPageDetailValue_2" id="editPageDetailValue_2"></p>
+                                 </div>
+                                 <div class="col-lg-2">
+                                    <p><button class="btn btn-primary" id="confirmEditPagePosition">保存する</label></p>
+                                 </div>
+                              </div>
+                              <div class="row">
+                                 <div class="col-lg-4">
+                                    <p><label for="editPageDetailValue_3">身長</label></p>
+                                 </div>
+                                 <div class="col-lg-6">
+                                    <p><input type="text" name="editPageDetailValue_3" id="editPageDetailValue_3"></p>
+                                 </div>
+                                 <div class="col-lg-2">
+                                    <p><button class="btn btn-primary" id="confirmEditPageHeight">保存する</label></p>
+                                 </div>
+                              </div>
+                              <div class="row">
+                                 <div class="col-lg-4">
+                                    <p><label for="editPageDetailValue_4">体重</label></p>
+                                 </div>
+                                 <div class="col-lg-6">
+                                    <p><input type="text" name="editPageDetailValue_4" id="editPageDetailValue_4"></p>
+                                 </div>
+                                 <div class="col-lg-2">
+                                    <p><button class="btn btn-primary" id="confirmEditPageWeight">保存する</label></p>
+                                 </div>
+                              </div>
+                              <div class="row">
+                                 <div class="col-lg-4">
+                                    <p><label for="editPageDetailValue_5">血液型</label></p>
+                                 </div>
+                                 <div class="col-lg-6">
+                                    <p><input type="text" name="editPageDetailValue_5" id="editPageDetailValue_5"></p>
+                                 </div>
+                                 <div class="col-lg-2">
+                                    <p><button class="btn btn-primary" id="confirmEditPageBloodtype">保存する</label></p>
+                                 </div>
+                              </div>
+                              <div class="row">
+                                 <div class="col-lg-4">
+                                    <p><label for="editPageDetailValue_6">学部</label></p>
+                                 </div>
+                                 <div class="col-lg-6">
+                                    <p><input type="text" name="editPageDetailValue_6" id="editPageDetailValue_6"></p>
+                                 </div>
+                                 <div class="col-lg-2">
+                                    <p><button class="btn btn-primary" id="confirmEditPageUndergraduate">保存する</label>
+                                    </p>
+                                 </div>
+                              </div>
+                              <div class="row">
+                                 <div class="col-lg-4">
+                                    <p><label for="editPageDetailValue_7">出身高校</label></p>
+                                 </div>
+                                 <div class="col-lg-6">
+                                    <p><input type="text" name="editPageDetailValue_7" id="editPageDetailValue_7"></p>
+                                 </div>
+                                 <div class="col-lg-2">
+                                    <p><button class="btn btn-primary" id="confirmEditPageHeigschool">保存する</label></p>
+                                 </div>
+                              </div>
+                           </form>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="modal-footer">
+               <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-hidden="true"
+                  id="cancelEditAcctountsDetail">キャンセル</button>
+            </div><!-- /.modal-footer -->
+         </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+   </div><!-- /.modal -->
+
+   <!-- アカウント編集モーダルのレイアウト設定 -->
+   <div class="modal fade" id="editAccountsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" data-keyboard="true" role="document">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title" id="editAccounts">アカウントの編集</h5>
+            </div>
+            <div class="modal-body">
+               <div class="container-fluid">
+                  <div class="row">
+                     <div class="col-lg-12">
+                        <div class="col-lg-9">
+                           <form>
+                              <div class="row">
+                                 <div class="col-lg-4">
+                                    <p>
+                                       <label for="editAccountsCategory">編集するカテゴリー</label>
+                                    </p>
+                                 </div>
+                                 <div class="col-lg-8">
+                                    <p>
+                                       <select name="editAccountsCategory" id="editAccountsCategory" size="1">
+                                          <option value="create">新しいカテゴリーを作成する</option>
+                                          <option value="acctount2019">現役生</option>
+                                          <option value="acctount2018">2018年度-主将/鳥羽</option>
+                                          <option value="acctount2017">2017年度-主将/サワ</option>
+                                          <option value="acctount2016">2016年度-主将/西戸</option>
+                                          <option value="acctount2015">2015年度-主将/福元</option>
+                                          <option value="acctount2014">2014年度-主将/伊藤</option>
+                                          <option value="acctount2013">2013年度-主将/海老名</option>
+                                          <option value="acctount2012">2012年度-主将/桂</option>
+                                          <option value="acctount2011">2011年度-主将/家治</option>
+                                          <option value="acctount2010">2010年度-主将/二ノ宮</option>
+                                          <option value="acctount2009">2009年度-主将/田上</option>
+                                          <option value="acctount2008">2008年度-主将/鈴木</option>
+                                          <option value="acctount2007">2007年度-主将/加藤</option>
+                                          <option value="acctount2006">2006年度-主将/酒井</option>
+                                          <option value="acctount2005">2005年度-主将/醍醐</option>
+                                          <option value="acctount2004">2004年度-主将/志村</option>
+                                          <option value="acctount2003">2003年度-主将/園</option>
+                                          <option value="acctount2002">2002年度-主将/佐藤</option>
+                                       </select>
+                                    </p>
+                                 </div>
+                              </div>
+                              <div id="editAccountsCategoryBlock" class="row">
+                                 <div class="col-lg-4">
+                                    <p>
+                                       <label for="currentAccountsCategoryTitle">カテゴリーのタイトル</label>
+                                    </p>
+                                 </div>
+                                 <div class="col-lg-8">
+                                    <p>
+                                       <input type="text" name="currentAccountsCategoryTitle"
+                                          id="currentAccountsCategoryTitle">
+                                    </p>
+                                 </div>
+                              </div>
+                              <div class="row">
+                                 <div class="col-lg-4">
+                                    <p>
+                                       <label for="newAccountsCategoryTitle">新しいカテゴリーのタイトル</label>
+                                    </p>
+                                 </div>
+                                 <div class="col-lg-8">
+                                    <p>
+                                       <input type="text" name="newAccountsCategoryTitle" id="newAccountsCategoryTitle">
+                                    </p>
+                                 </div>
+                              </div>
+                           </form>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="modal-footer">
+               <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-hidden="true"
+                  id="cancelEditAcctountsCategory">キャンセル</button>
+               <button type="button" class="btn btn-primary" data-dismiss="modal"
+                  id="confirmEditAcctountsCategoryTitle">変更する</button>
+            </div><!-- /.modal-footer -->
+         </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+   </div><!-- /.modal -->
+
+   <!-- アーカイブ編集モーダルのレイアウト設定 -->
+   <div class="modal fade" id="editArchivesModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" data-keyboard="true" role="document">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title" id="editArchives">アーカイブの編集</h5>
+            </div>
+            <div class="modal-body">
+               <div class="container-fluid">
+                  <div class="row">
+                     <div class="col-lg-12">
+                        <div class="col-lg-9">
+                           <form>
+                              <div class="row">
+                                 <div class="col-lg-4">
+                                    <p>
+                                       <label for="editArchivesCategory">編集するカテゴリー</label>
+                                    </p>
+                                 </div>
+                                 <div class="col-lg-8">
+                                    <p>
+                                       <select name="editArchivesCategory" id="editArchivesCategory" size="1">
+                                          <option value="create">新しいカテゴリーを作成する</option>
+                                          <option value="2019">2019年度-主将/山崎</option>
+                                          <option value="2018">2018年度-主将/鳥羽</option>
+                                          <option value="2017">2017年度-主将/サワ</option>
+                                          <option value="2016">2016年度-主将/西戸</option>
+                                          <option value="2015">2015年度-主将/福元</option>
+                                          <option value="2014">2014年度-主将/伊藤</option>
+                                          <option value="2013">2013年度-主将/海老名</option>
+                                          <option value="2012">2012年度-主将/桂</option>
+                                          <option value="2011">2011年度-主将/家治</option>
+                                          <option value="2010">2010年度-主将/二ノ宮</option>
+                                          <option value="2009">2009年度-主将/田上</option>
+                                          <option value="2008">2008年度-主将/鈴木</option>
+                                          <option value="2007">2007年度-主将/加藤</option>
+                                          <option value="2006">2006年度-主将/酒井</option>
+                                          <option value="2005">2005年度-主将/醍醐</option>
+                                          <option value="2004">2004年度-主将/志村</option>
+                                          <option value="2003">2003年度-主将/園</option>
+                                          <option value="2002">2002年度-主将/佐藤</option>
+                                       </select>
+                                    </p>
+                                 </div>
+                              </div>
+                              <div id="editArchivesCategoryBlock" class="row">
+                                 <div class="col-lg-4">
+                                    <p>
+                                       <label for="currentArchivesCategoryTitle">カテゴリーのタイトル</label>
+                                    </p>
+                                 </div>
+                                 <div class="col-lg-8">
+                                    <p>
+                                       <input type="text" name="currentArchivesCategoryTitle"
+                                          id="currentArchivesCategoryTitle">
+                                    </p>
+                                 </div>
+                              </div>
+                              <div class="row">
+                                 <div class="col-lg-4">
+                                    <p>
+                                       <label for="newArchivesCategoryTitle">新しいカテゴリーのタイトル</label>
+                                    </p>
+                                 </div>
+                                 <div class="col-lg-8">
+                                    <p>
+                                       <input type="text" name="newArchivesCategoryTitle" id="newArchivesCategoryTitle">
+                                    </p>
+                                 </div>
+                              </div>
+                           </form>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="modal-footer">
+               <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-hidden="true"
+                  id="cancelEditCategory">キャンセル</button>
+               <button type="button" class="btn btn-primary" data-dismiss="modal"
+                  id="confirmEditCategoryTitle">変更する</button>
+            </div><!-- /.modal-footer -->
+         </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+   </div><!-- /.modal -->
+
+   <!-- アーカイブ個別ページ編集モーダルのレイアウト設定 -->
+   <div class="modal fade" id="editArchivesDetailModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" data-keyboard="true" role="document">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title" id="editArchivesDetail">アーカイブの編集</h5>
+            </div>
+            <div class="modal-body">
+               <div class="container-fluid">
+                  <div class="row">
+                     <div class="col-lg-12">
+                        <div class="col-lg-9">
+                           <form>
+                              <div class="row">
+                                 <div class="col-lg-4">
+                                    <p>
+                                       <label for="editArchivesDetailCategory">編集するカテゴリー</label>
+                                    </p>
+                                 </div>
+                                 <div class="col-lg-8">
+                                    <p>
+                                       <select name="editArchivesDetailCategory" id="editArchivesDetailCategory"
+                                          size="1">
+                                          <option value="create">新しいカテゴリーを作成する</option>
+                                          <option value="95kantoleague">第95回関東大学バスケットボールリーグ戦</option>
+                                          <option value="77sokei">第77回早慶バスケットボール定期戦</option>
+                                          <option value="12keiyon">第12回慶應義塾大学・延世大学校バスケットボール定期戦</option>
+                                          <option value="59kantoshinjin">第59回関東大学バスケットボール新人戦</option>
+                                          <option value="87keikan">第87回慶関バスケットボール定期戦</option>
+                                          <option value="68kantotournament">第68回関東大学バスケットボール選手権大会</option>
+                                          <option value="35keiodentetsu">第35回京王電鉄杯</option>
+                                       </select>
+                                    </p>
+                                 </div>
+                              </div>
+                              <div id="editArchivesDetailCategoryBlock" class="row">
+                                 <div class="col-lg-4">
+                                    <p>
+                                       <label for="currentArchivesDetailCategoryTitle">カテゴリーのタイトル</label>
+                                    </p>
+                                 </div>
+                                 <div class="col-lg-8">
+                                    <p>
+                                       <input type="text" name="currentArchivesDetailCategoryTitle"
+                                          id="currentArchivesDetailCategoryTitle">
+                                    </p>
+                                 </div>
+                              </div>
+                              <div class="row">
+                                 <div class="col-lg-4">
+                                    <p>
+                                       <label for="newArchivesDetailCategoryTitle">新しいカテゴリーのタイトル</label>
+                                    </p>
+                                 </div>
+                                 <div class="col-lg-8">
+                                    <p>
+                                       <input type="text" name="newArchivesDetailCategoryTitle"
+                                          id="newArchivesDetailCategoryTitle">
+                                    </p>
+                                 </div>
+                              </div>
+                           </form>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="modal-footer">
+               <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-hidden="true"
+                  id="cancelEditDetailCategory">キャンセル</button>
+               <button type="button" class="btn btn-primary" data-dismiss="modal"
+                  id="confirmEditDetailCategoryTitle">変更する</button>
+            </div><!-- /.modal-footer -->
+         </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+   </div><!-- /.modal -->
+
+   <!-- アップロードモーダルのレイアウト設定 -->
+   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" data-keyboard="true" role="document">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title" id="preview-description">ファイルアップロード</h5>
+            </div>
+            <div class="modal-body">
+               <div class="container-fluid">
+                  <div class="row">
+                     <div class="col-lg-12">
+                        <div class="col-lg-9">
+                           <form>
+                              <div class="row">
+                                 <div class="col-lg-4">
+                                    <p>
+                                       <label for="uploadFile">ファイル</label>
+                                    </p>
+                                 </div>
+                                 <div class="col-lg-8">
+                                    <p>
+                                       <input type="file" multiple="multiple" name="uploadFile" id="uploadFile">
+                                    </p>
+                                 </div>
+                              </div>
+                              <div class="row">
+                                 <div class="col-lg-4">
+                                    <p>
+                                       <label for="uploadTargetGroup">アップロード先のグループ</label>
+                                    </p>
+                                 </div>
+                                 <div class="col-lg-8">
+                                    <p>
+                                       <select name="uploadTargetGroup" id="uploadTargetGroup" size="1">
+                                          <option value="create">新しいグループを追加する</option>
+                                       </select>
+                                    </p>
+                                 </div>
+                              </div>
+                              <div id="uploadTargetGroupTitleBlock" class="row">
+                                 <div class="col-lg-4">
+                                    <p>
+                                       <label for="uploadTargetGroupTitle">グループのタイトル</label>
+                                    </p>
+                                 </div>
+                                 <div class="col-lg-8">
+                                    <p>
+                                       <input type="text" name="uploadTargetGroupTitle" id="uploadTargetGroupTitle">
+                                    </p>
+                                 </div>
+                              </div>
+                              <div class="row">
+                                 <div class="col-lg-4">
+                                    <p>
+                                       <label for="uploadTitle">コンテンツのタイトル</label>
+                                    </p>
+                                 </div>
+                                 <div class="col-lg-8">
+                                    <p>
+                                       <input type="text" name="uploadTitle" id="uploadTitle">
+                                    </p>
+                                 </div>
+                              </div>
+                              <div class="row">
+                                 <div class="col-lg-4">
+                                    <p>
+                                       <label for="uploadContents">備考</label>
+                                    </p>
+                                 </div>
+                                 <div class="col-lg-8">
+                                    <p>
+                                       <textarea type="text" name="uploadContents" id="uploadContents" rows="5"
+                                          cols="60"></textarea>
+                                    </p>
+                                 </div>
+                              </div>
+                           </form>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="modal-footer">
+               <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-hidden="true"
+                  id="cancelUpload">キャンセル</button>
+               <button type="button" class="btn btn-primary" data-dismiss="modal" id="confirmUpload2">アップロードする</button>
+            </div><!-- /.modal-footer -->
+         </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+   </div><!-- /.modal -->
+
+   <!-- 招待モーダルのレイアウト設定 -->
+   <div class="modal fade" id="inviteModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" data-keyboard="true" role="document">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title" id="preview-description">メンバーの招待</h5>
+            </div>
+            <div class="modal-body">
+               <div class="container-fluid">
+                  <div class="row">
+                     <div class="col-lg-12">
+                        <div class="col-lg-9">
+                           <form>
+                              <div class="row">
+                                 <div class="col-lg-4">
+                                    <p>
+                                       <label for="viewingKeyInviteMailInvite">新メンバーのメールアドレス</label>
+                                    </p>
+                                 </div>
+                                 <div class="col-lg-8">
+                                    <p>
+                                       <input type="text" name="viewingKeyInviteMailInvite"
+                                          id="viewingKeyInviteMailInvite">
+                                    </p>
+                                 </div>
+                              </div>
+                              <div class="row">
+                                 <div class="col-lg-4">
+                                    <p>
+                                       <label for="viewingKeyInviteRoll">新メンバーの権限</label>
+                                    </p>
+                                 </div>
+                                 <div class="col-lg-8">
+                                    <div class="row">
+                                       <div class="col-lg-2">
+                                          <p>
+                                             <select name="viewingKeyInviteRoll" id="viewingKeyInviteRoll">
+                                                <option value="user" default>閲覧のみ</option>
+                                                <option value="editor">編集可</option>
+                                                <option value="manager">管理者</option>
+                                             </select>
+                                          </p>
+                                       </div>
+                                       <div class="col-lg-10">
+                                          <p class="auth-exp"><small>・管理者権限・・・どのページも編集・招待可能<br>
+                                                ・編集権限・・・自分のページのみ編集可能<br>
+                                                ・閲覧のみ・・・閲覧のみ可能</small></p>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="row">
+                                 <div class="col-lg-4">
+                                    <p>
+                                       <label for="viewingKeyInviteExpire">アクセス期限を設ける</label>
+                                    </p>
+                                 </div>
+                                 <div class="col-lg-8">
+                                    <p>
+                                       <input type="text" name="viewingKeyInviteExpire" id="viewingKeyInviteExpire"
+                                          class="hasDatepicker">
+                                    </p>
+                                    <p>
+                                       <button type="button" class="ui-datepicker-trigger">カレンダーから選択</button>
+                                    </p>
+                                    <p class="exp-exp"><small>期限を設けない場合は『20990101』を記入ください。</small></p>
+                                 </div>
+                              </div>
+                              <div class="row">
+                                 <div class="col-lg-4">
+                                    <p>
+                                       <label for="viewingKeyInviteKeyword">登録ID</label>
+                                    </p>
+                                 </div>
+                                 <div class="col-lg-8">
+                                    <p>
+                                       <input type="text" name="viewingKeyInviteKeyword" id="viewingKeyInviteKeyword">
+                                    </p>
+                                    <p class="id-exp"><small>登録IDを発行したい場合は事務局（H22卒/田上）までお問い合わせください。</small></p>
+                                 </div>
+                              </div>
+                              <div class="row">
+                                 <div class="col-lg-4">
+                                    <p>
+                                       <label for="viewingKeyInviteMessage">メッセージ</label>
+                                    </p>
+                                 </div>
+                                 <div class="col-lg-8">
+                                    <p>
+                                       <textarea type="text" name="viewingKeyInviteMessage" id="viewingKeyInviteMessage"
+                                          rows="5" cols="60"></textarea>
+                                    </p>
+                                 </div>
+                              </div>
+                           </form>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="modal-footer">
+               <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-hidden="true">キャンセル</button>
+               <button type="button" class="btn btn-primary" data-dismiss="modal"
+                  id="confirmViewingKeyInvite">招待する</button>
+            </div><!-- /.modal-footer -->
+         </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+   </div><!-- /.modal -->
+
+   <!-- コメントモーダルのレイアウト設定 -->
+   <div class="modal fade" id="commentModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" data-keyboard="true" role="document">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title" id="preview-description">コメント</h5>
+            </div>
+            <div class="modal-body">
+               <div class="container-fluid">
+                  <div class="row">
+                     <div class="col-lg-12">
+                        <div class="col-lg-9">
+                           <form>
+                              <div class="row">
+                                 <div class="col-lg-4">
+                                    <p>
+                                       <label for="commentTimeContentsTime">時間</label>
+                                    </p>
+                                 </div>
+                                 <div class="col-lg-8">
+                                    <p id="commentTimeContentsTime">
+                                       <span class="video-palyer-currenttime"><span
+                                             id="currentTime">00:00:00</span></span>
+                                    </p>
+                                 </div>
+                              </div>
+                              <div class="row">
+                                 <div class="col-lg-4">
+                                    <p>
+                                       <label for="commentTimeCommentContents">コメント</label>
+                                    </p>
+                                 </div>
+                                 <div class="col-lg-8">
+                                    <p>
+                                       <textarea type="text" name="commentTimeCommentContents"
+                                          id="commentTimeCommentContents" rows="5" cols="60"></textarea>
+                                    </p>
+                                 </div>
+                              </div>
+                           </form>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="modal-footer">
+               <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-hidden="true">キャンセル</button>
+               <button type="button" class="btn btn-primary" data-dismiss="modal"
+                  id="commentTimeConfirmComment">コメントする</button>
+            </div><!-- /.modal-footer -->
+         </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+   </div><!-- /.modal -->
+
+   <!--Jquery js-->
+   <script src="assets/js/jquery-3.0.0.min.js"></script>
+   <!--Jquery-ui js-->
+   <script src="assets/js/jquery-ui.min.js"></script>
+   <!--Bootstrap js-->
+   <script src="assets/js/bootstrap.min.js"></script>
+   <!--Owl-Carousel js-->
+   <script src="assets/js/owl.carousel.min.js"></script>
+   <!--SlickNav js-->
+   <script src="assets/js/jquery.slicknav.min.js"></script>
+   <!--Magnific js-->
+   <script src="assets/js/jquery.magnific-popup.min.js"></script>
+   <!--Main js-->
+   <script src="assets/js/main.js"></script>
+</body>
+
+</html>

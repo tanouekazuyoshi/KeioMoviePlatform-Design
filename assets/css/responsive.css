@@ -652,6 +652,24 @@ padding: 0.5rem 0;
 display: none;
 }
 
+/* 2019.04.13追記 メディアプレーヤーコメントレスポンシブ対応 */
+
+#commentBox .col-lg-3 {
+-webkit-box-flex: 0;
+-webkit-flex: 0 0 25%;
+-ms-flex: 0 0 25%;
+flex: 0 0 25%;
+max-width: 25%;
+}
+
+#commentBox .col-lg-9 {
+-webkit-box-flex: 0;
+-webkit-flex: 0 0 75%;
+-ms-flex: 0 0 75%;
+flex: 0 0 75%;
+max-width: 75%;
+}
+
 }
 
 

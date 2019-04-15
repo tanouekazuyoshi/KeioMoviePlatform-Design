@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!-- Title -->
+   <title>KEIO MOVIE PLATFORM</title>
+   <!-- Favicon -->
+   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png">
+   <!--Bootstrap css-->
+   <link rel="stylesheet" href="assets/css/bootstrap.css">
+   <!--Font Awesome css-->
+   <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+   <!--Magnific css-->
+   <link rel="stylesheet" href="assets/css/magnific-popup.css">
+   <!--Owl-Carousel css-->
+   <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+   <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+   <!--Animate css-->
+   <link rel="stylesheet" href="assets/css/animate.min.css">
+   <!--Slicknav css-->
+   <link rel="stylesheet" href="assets/css/slicknav.min.css">
+   <!--Site Main Style css-->
+   <link rel="stylesheet" href="assets/css/style.css">
+   <!--ext.js 2019.02.05追記-->
+   <link rel="stylesheet" href="ext/css/ext.css">
+   <!--Responsive css-->
+   <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body id="register-page">
+   <!-- Header Area Start -->
+   <header class="filmoja-header-area">
+      <!-- Main Header Area Start -->
+      <div class="main-header-area">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-2">
+                  <div class="site-logo">
+                     <a href="keio-top.html">
+                        <img src="assets/img/logo.png" alt="keiologo" />
+                     </a>
+                  </div>
+                  <!-- Responsive Menu Start -->
+                  <div class="filmoja-responsive-menu"></div>
+                  <!-- Responsive Menu End -->
+               </div>
+               <div class="col-lg-10">
+                  <div class="mainmenu">
+                     <nav>
+                        <ul id="responsive_navigation">
+                           <li><a href="keio-top.html">ホーム</a></li>
+                           <li><a href="keio-archives.html">アーカイブ</a></li>
+                           <li><a href="keio-accounts.html">アカウント</a></li>
+                           <li><a href="keio-login.html">ログイン</a></li>
+                        </ul>
+                     </nav>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- Main Header Area End -->
+   </header>
+   <!-- Header Area End -->
+
+   <!-- Login Area Start -->
+   <section class="filmoja-login-area section_70 register-background">
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-12">
+               <div class="col-lg-9 user-register-center">
+                  <div class="auth-box-left margin-top">
+                     <h3>アカウント新規作成</h3>
+                     <div class="terms-box">
+                        <h4>利用規約</h4>
+                        <p>私（個人・法人・団体）は、当サービスが肖像権を使用することに同意します。この表明・確約が虚偽の申告であることが判明した場合は、御社会員登録の拒否もしくは会員資格の一時停止または除名を受けても異議を申しません。これにより損害が生じた場合でも、一切私の責任とし、貴社に損害賠償請求等は行いません。
+                        </p>
+                     </div>
+                     <div class="terms-checkbox">
+                        <input type="checkbox" id="terms" name="terms">
+                        <label for="terms">利用規約に同意する</label>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-lg-12">
+               <div class="col-lg-6 user-register-center">
+                  <div class="auth-box-left">
+                     <div class="login-box">
+                        <form>
+                           <div class="row">
+                              <div class="col-lg-6">
+                                 <p>
+                                    <label for="ful_name">姓</label>
+                                    <input type="text" name="last_name" id="last_name" placeholder="姓">
+                                 </p>
+                              </div>
+                              <div class="col-lg-6">
+                                 <p>
+                                    <label for="Email">名</label>
+                                    <input type="text" name="first_name" id="first_name" placeholder="名">
+                                 </p>
+                              </div>
+                           </div>
+                           <div class="row">
+                              <div class="col-lg-12">
+                                 <p>
+                                    <label for="Email">メールアドレス</label>
+                                    <input type="email" name="Email" id="Email" placeholder="メールアドレス">
+                                 </p>
+                              </div>
+                           </div>
+                           <div class="row">
+                              <div class="col-lg-12">
+                                 <p>
+                                    <label for="password">パスワード</label>
+                                    <input type="password" name="password" id="password" placeholder="パスワード">
+                                 </p>
+                              </div>
+                           </div>
+                           <div class="row">
+                              <div class="col-lg-12">
+                                 <p>
+                                    <label for="password2">パスワード（確認用）</label>
+                                    <input type="password" name="password2" id="password2" placeholder="パスワード（確認用）">
+                                 </p>
+                              </div>
+                           </div>
+                           <div class="row">
+                              <div class="col-lg-12">
+                                 <p>
+                                    <label for="register_id">登録用ID</label>
+                                    <input type="text" name="register_id" id="register_id" placeholder="登録用ID">
+                                 </p>
+                              </div>
+                           </div>
+                           <div class="row">
+                              <div class="col-md-12">
+
+                                 <p>
+                                    <button type="submit" class="btn btn-block">送信する</button>
+                                 </p>
+                                 <p>over8k.com@gmail.comからメールが届きます。
+                                    迷惑メールに振り分けられないよう設定にご注意ください。</p>
+                              </div>
+                           </div>
+                        </form>
+                     </div>
+                  </div>
+               </div>
+
+
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- Login Area End -->
+
+
+   <!-- Footer Area Start -->
+   <footer class="filmoja-footer-area">
+      <div class="footer-top-area section_70">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-3 col-sm-6">
+                  <div class="single-footer-widget">
+                     <h3>quick links</h3>
+                     <ul>
+                        <li><a href="#"><i class="fa fa-angle-double-right"></i>about MOVIE PLATFORM</a></li>
+                        <li><a href="#"><i class="fa fa-angle-double-right"></i>Terms & Conditions</a></li>
+                        <li><a href="#"><i class="fa fa-angle-double-right"></i>Privacy policy</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="copyright-area">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-12">
+                  <div class="copyright-box">
+                     <p>2019 © Endorphins. All rights reserved</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </footer>
+   <!-- Footer Area End -->
+   <!--Jquery js-->
+   <script src="assets/js/jquery-3.0.0.min.js"></script>
+   <!--Jquery-ui js-->
+   <script src="assets/js/jquery-ui.min.js"></script>
+   <!--Bootstrap js-->
+   <script src="assets/js/bootstrap.min.js"></script>
+   <!--Owl-Carousel js-->
+   <script src="assets/js/owl.carousel.min.js"></script>
+   <!--SlickNav js-->
+   <script src="assets/js/jquery.slicknav.min.js"></script>
+   <!--Magnific js-->
+   <script src="assets/js/jquery.magnific-popup.min.js"></script>
+   <!--Main js-->
+   <script src="assets/js/main.js"></script>
+   <!--ext.js 2019.02.05追記-->
+   <script src="ext/js/ext.js"></script>
+</body>
+
+</html>

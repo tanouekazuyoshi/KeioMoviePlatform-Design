@@ -38,6 +38,12 @@ Version: 1.0
 26 - ERROR PAGE CSS
 27 - CONTACT PAGE CSS
 28 - Movie Player CSS  <2019.02.03　追加>
+29 - Register CSS  <2019.04.11　追加>
+30 - Modal CSS  <2019.04.12 追加>
+31 - Video Transfer CSS  <2019.04.12 追加>
+32 - Single Video Page CSS  <2019.04.12 追加>
+33 - Account page CSS <2019.04.14 追加>
+34 - Account Detail page CSS <2019.04.14 追加>
 */
 
 
@@ -994,7 +1000,7 @@ padding: 0 80px;
 }
 
 /*2019.04.08 5px->3pxに変更*/
-.popup-youtube i {
+.top-action i {
 	margin-left: 3px
 }
 
@@ -2329,22 +2335,30 @@ ul.company-desc-list li i {
 	border: 1px solid #fbbd61
 }
 
-.cp_menu input {
-	display: none;
+.cp_menu input,
+.player_account_menu input,
+.staff_account_menu input {
+display: none;
 }
 
-.cp_menu input:checked + ul {
+.cp_menu input:checked + ul,
+.player_account_menu input:checked + ul,
+.staff_account_menu input:checked + ul {
 	display: block;
 }
 
-.cp_menu ul {
+.cp_menu ul,
+.player_account_menu ul,
+.staff_account_menu ul {
 	display: none;
 	list-style: none;
 	margin: 0;
 	padding: 0 0 0.5rem 0.5rem;
 }
 
-.cp_menu label {
+.cp_menu label,
+.player_account_menu label,
+.staff_account_menu label {
 	display: block;
 	position: relative;
 	margin: 0;
@@ -2355,11 +2369,13 @@ ul.company-desc-list li i {
 	cursor: pointer;
 }
 
-.cp_menu label::before {
+.cp_menu label::before,
+.player_account_menu label::before,
+.staff_account_menu label::before {
 	position: absolute;
 	content: '▼';
 	color: #737373;
-	right: 0.5em;
+	right: 1em;
 	top: 25%;
 }
 
@@ -2369,14 +2385,14 @@ ul.company-desc-list li i {
 	height: 240px;
 }
 
-.player_account_menu {
+.player_account_wrap {
 	overflow-y: auto;
 	height: 550px;
 }
 
-.staff_account_menu {
+.staff_account_wrap {
 	overflow-y: auto;
-	height: 90px;
+	height: 50px;
 }
 
 /*================================================
@@ -3462,7 +3478,9 @@ ul.company-desc-list li i {
 	line-height: 30px;
 }
 
-.login-box h4 {
+/*2019.04.11 .terms-box追記*/
+.login-box h4,
+.terms-box h4 {
 	font-size: 17px;
 	color: #333;
 	text-transform: capitalize;
@@ -3470,11 +3488,13 @@ ul.company-desc-list li i {
 	margin-bottom: 15px
 }
 
+/*2019.04.11 border-radius追記*/
 .login-box {
 	padding: 30px;
 	border: 1px solid #ddd;
 	margin-top: 20px;
-	height: 290px
+	height: 290px;
+	border-radius: 4px;
 }
 
 .login-box label {
@@ -3482,12 +3502,14 @@ ul.company-desc-list li i {
 	text-transform: capitalize;
 }
 
+/*2019.04.11 border-radius追記*/
 .login-box form input {
 	width: 100%;
 	display: block;
 	border: 1px solid #ddd;
 	padding: 7px 10px;
 	margin-top: 2px;
+	border-radius: 4px;
 }
 
 .login-box form button {
@@ -3761,10 +3783,6 @@ ul.company-desc-list li i {
 overflow: auto等を追記
 ==================================================*/
 
-#myModal .row {
-margin-bottom: 15px;
-}
-
 .video-player-video,
 .video-player-button,
 .video-player-thumbnail,
@@ -3784,15 +3802,15 @@ font-size: 20px;
 }
 
 #commentBox {
-padding: 5% 3%;
+padding: 5%;
 border-radius: 6px;
 border: 1px solid lightgray;
 overflow-y: auto;
-height: 500px;
+height: 600px;
 }
 
-#commentBox a {
-font-size: 18px;
+#commentBox .commentBox-time {
+padding-top: 5px;
 }
 
 #commentBox .comment {
@@ -3802,7 +3820,502 @@ display: default;
 margin-left: 10%;
 }
 
-#myModal .modal-dialog {
+#commentBox .row {
+margin-right: initial;
+margin-left: initial;
+margin-top: 5px;
+margin-bottom: 5px;
+}
+
+#commentBox img {
+border-radius: 30px;
+}
+
+#commentBox .col-lg-3 {
+padding-right: initial;
+padding-left: initial;
+}
+
+#commentBox .person-reaction p {
+color: #007bff;
+}
+
+#commentBox #commentBox-refer {
+color: #ec7532;
+}
+
+/*================================================
+29 - Register CSS
+==================================================*/
+
+.user-register-center {
+margin: auto;
+padding: 15px;
+}
+
+.user-register-center .auth-box-left h3,
+.user-register-center .auth-box-right h3 {
+text-align: center;
+color: #f1c400;
+font-size: 28px;
+text-shadow: 0px 0px 10px #001E62;
+}
+
+.terms-box {
+padding: 30px;
+border: 1px solid #ddd;
+margin-top: 20px;
+overflow-y: auto;
+height: 450px;
+border-radius: 4px 4px 0 0;
+background-color: white;
+}
+
+.terms-checkbox {
+text-align: center;
+padding: 30px;
+font-size: medium;
+background: #f1c400;
+border-radius: 0 0 4px 4px;
+}
+
+.user-register-center .login-box {
+height: initial;
+background: white;
+}
+
+.user-register-center .login-box form button {
+margin-top: 10px;
+padding: 15px 30px;
+}
+
+#register-page .register-background {
+background-image: url(../../assets/img/register-bg3.jpg);
+background-size: cover;
+}
+
+.user-register-center .terms-checkbox label {
+color: #000;
+}
+
+
+/*================================================
+30 - Modal CSS
+==================================================*/
+
+#myModal .row,
+#inviteModal .row,
+#commentModal .row,
+#editArchivesModal .row,
+#editArchivesDetailModal .row,
+#editAccountsModal .row,
+#editAccountsDetailModal .row {
+margin-bottom: 15px;
+}
+
+#myModal .modal-dialog,
+#inviteModal .modal-dialog,
+#commentModal .modal-dialog,
+#editArchivesModal .modal-dialog,
+#editArchivesDetailModal .modal-dialog,
+#editAccountsModal .modal-dialog,
+#editAccountsDetailModal .modal-dialog {
 width:100%;
 max-width: 1052px;
+}
+
+.modal-body .col-lg-9 {
+margin: auto;
+}
+
+.modal-body input,
+.modal-body textarea {
+width:100%;
+border: 1px solid #ccc;
+border-radius: 4px;
+padding: 5px;
+}
+
+.modal-body #uploadFile,
+.modal-body #editPageImage {
+border: initial;
+}
+
+.modal-body .ui-datepicker-trigger {
+margin: 5px 0;
+}
+
+.modal-body .auth-exp {
+color: #000;
+line-height: initial;
+padding-left: inherit;
+}
+
+.modal-body .exp-exp,
+.modal-body .id-exp {
+color: #000;
+}
+
+.modal-body #editPageImagePreview {
+	max-width: 40%;
+}
+
+/*================================================
+31 - Video Transfer CSS  <2019.04.12 追加>
+==================================================*/
+
+.thumb-hover>a.transfer-video {
+	position: absolute;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	width: 60px;
+	height: 60px;
+	border: 2px solid #fff;
+	border-radius: 50%;
+	top: 50%;
+	left: 50%;
+	margin: -30px 0 0 -30px;
+	z-index: 2;
+	font-size: 19px;
+	color: #fff;
+	-webkit-transition: 0.4s ease;
+	transition: 0.4s ease;
+	-webkit-transform: scale(0);
+	transform: scale(0);
+	opacity: 0;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"
+}
+
+.thumb-hover>a.transfer-video>i {
+	margin-top: 4px;
+	margin-left: 2px;
+}
+
+.single-top-movie .top-movie-wrap:hover .thumb-hover>a.transfer-video {
+	opacity: 1;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+
+/*================================================
+32 - Single Video Page CSS  <2019.04.12 追加>
+==================================================*/
+
+.movie-single-person img {
+	border-radius: 30px;
+	height: 60px;
+}
+
+.movie-single-person .person-picture {
+	padding-right: 15px;
+	margin-left: 15px;
+}
+
+.movie-single-person .person-data::before {
+	content:"\A";
+}
+
+
+
+
+
+/*================================================
+33 - Account page CSS <2019.04.14 追加>
+==================================================*/
+
+/*ボックス全体*/
+.accbox {
+	margin: 2em 0;
+	padding: 0;
+}
+
+/*ラベル*/
+.accbox label {
+	display: block;
+	margin: 1.5px 0;
+	padding : 11px 12px;
+	font-weight: bold;
+	cursor :pointer;
+	transition: all 0.5s;
+}
+
+/*ラベルホバー時*/
+.accbox label:hover {
+	background :#85baef;
+}
+
+/*チェックは隠す*/
+.accbox input {
+	display: none;
+}
+
+/*中身を非表示にしておく*/
+.accbox .accshow {
+	height: 0;
+	padding: 0;
+	overflow: hidden;
+	opacity: 0;
+	transition: 0.8s;
+}
+
+/*クリックで中身表示*/
+.cssacc:checked + .accshow {
+	height: auto;
+	padding: 5px;
+	opacity: 1;
+}
+
+
+/*================================================
+34 - Account Detail page CSS <2019.04.14 追加>
+==================================================*/
+
+.switch__label {
+	width: 50px;
+	position: relative;
+	display: inline-block;
+}
+.switch__content {
+	display: block;
+  cursor: pointer;
+  position: relative;
+  border-radius: 30px;
+  height: 31px;
+overflow: hidden;
+}
+.switch__content:before {
+	content: "";
+	display: block;
+	position: absolute;
+	width: calc(100% - 3px);
+	height: calc(100% - 3px);
+	top: 0;
+	left: 0;
+	border: 1.5px solid #E5E5EA;
+	border-radius: 30px;
+	background-color: #fff;
+}
+.switch__content:after {
+	content: "";
+	display: block;
+	position: absolute;
+	background-color: transparent;
+	width: 0;
+	height: 0;
+	top: 50%;
+	left: 50%;
+	border-radius: 30px;
+	-webkit-transition: all .5s;
+	   -moz-transition: all .5s;
+	    -ms-transition: all .5s;
+	     -o-transition: all .5s;
+	        transition: all .5s;
+}
+.switch__input {
+	display: none;
+}
+ 
+.switch__circle {
+	display: block;
+	top: 2px;
+	left: 2px;
+	position: absolute;
+	-webkit-box-shadow: 0 2px 6px #999;
+	        box-shadow: 0 2px 6px #999;
+	width: 27px;
+	height: 27px;
+	-webkit-border-radius: 20px;
+	        border-radius: 20px;
+	background-color: #fff;
+	-webkit-transition: all .5s;
+	   -moz-transition: all .5s;
+	    -ms-transition: all .5s;
+	     -o-transition: all .5s;
+	        transition: all .5s;
+}
+.switch__input:checked ~ .switch__circle {
+	left: 21px;
+}
+ 
+.switch__input:checked ~ .switch__content:after {
+	background-color: #4BD964;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+ 
+ 
+/*** Windows ***/
+.switch2__label {
+	width: 44px;
+	position: relative;
+	display: inline-block;
+}
+.switch2__content {
+	display: block;
+  cursor: pointer;
+  position: relative;
+  border-radius: 30px;
+  height: 20px;
+  -webkit-transition: all .1s .4s;
+	   -moz-transition: all .1s .4s;
+	    -ms-transition: all .1s .4s;
+	     -o-transition: all .1s .4s;
+	        transition: all .1s .4s;
+	overflow: hidden;
+}
+.switch2__content:before {
+	content: "";
+	display: block;
+	position: absolute;
+	width: calc(100% - 4px);
+	height: calc(100% - 4px);
+	top: 0;
+	left: 0;
+	border: 1.5px solid #000000;
+	border-radius: 20px;
+	background-color: #fff;
+}
+.switch2__content:after {
+	content: "";
+	display: block;
+	position: absolute;
+	background-color: transparent;
+	width: 0;
+	height: 100%;
+	top: 0;
+	left: 0;
+	
+	border-radius: 20px;
+	-webkit-transition: all .5s;
+	   -moz-transition: all .5s;
+	    -ms-transition: all .5s;
+	     -o-transition: all .5s;
+	        transition: all .5s;
+}
+.switch2__input {
+	display: none;
+}
+.switch2__circle {
+	display: block;
+	top: 5px;
+	left: 5px;
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	-webkit-border-radius: 10px;
+	        border-radius: 10px;
+	background-color: #000000;
+	-webkit-transition: all .5s;
+	   -moz-transition: all .5s;
+	    -ms-transition: all .5s;
+	     -o-transition: all .5s;
+	        transition: all .5s;
+}
+.switch2__input:checked ~ .switch2__circle {
+	left: 29px;
+	background-color: #fff;
+}
+.switch2__input:checked ~ .switch2__content {
+ 
+	border-color: transparent;
+	-webkit-transition: all 0s;
+	   -moz-transition: all 0s;
+	    -ms-transition: all 0s;
+	     -o-transition: all 0s;
+	        transition: all 0s;
+}
+ 
+.switch2__input:checked ~ .switch2__content:after {
+	background-color: #0078D7;
+	width: 100%;
+}
+ 
+ 
+/*** Android ***/
+.switch3__label {
+	width: 37px;
+	position: relative;
+	display: inline-block;
+	padding-top: 3px;
+}
+.switch3__content {
+	display: block;
+  cursor: pointer;
+  position: relative;
+  border-radius: 7px;
+  height: 14px;
+  background-color: rgba(34,31,31,.26);
+  -webkit-transition: all .1s .4s;
+	   -moz-transition: all .1s .4s;
+	    -ms-transition: all .1s .4s;
+	     -o-transition: all .1s .4s;
+	        transition: all .1s .4s;
+	overflow: hidden;
+}
+ 
+.switch3__content:after {
+	content: "";
+	display: block;
+	position: absolute;
+	
+	width: 0;
+	height: 100%;
+	top: 0;
+	left: 0;
+	
+	border-radius: 7px;
+	-webkit-transition: all .5s;
+	   -moz-transition: all .5s;
+	    -ms-transition: all .5s;
+	     -o-transition: all .5s;
+	        transition: all .5s;
+}
+.switch3__input {
+	display: none;
+}
+.switch3__circle {
+	display: block;
+	top: 0px;
+	left: 0px;
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	-webkit-border-radius: 10px;
+	        border-radius: 10px;
+	background-color: #F1F1F1;
+	-webkit-transition: all .5s;
+	   -moz-transition: all .5s;
+	    -ms-transition: all .5s;
+	     -o-transition: all .5s;
+	        transition: all .5s;
+	-webkit-box-shadow: 0 2px 2px #ccc;
+	        box-shadow: 0 2px 2px #ccc;
+}
+.switch3__input:checked ~ .switch3__circle {
+	left: 18px;
+	background-color: #009688;
+}
+.switch3__input:checked ~ .switch3__content {
+ 
+	border-color: transparent;
+	-webkit-transition: all 0s;
+	   -moz-transition: all 0s;
+	    -ms-transition: all 0s;
+	     -o-transition: all 0s;
+	        transition: all 0s;
+}
+ 
+.switch3__input:checked ~ .switch3__content:after {
+	background-color: rgba(0,150,136,.5);
+	width: 100%;
 }
