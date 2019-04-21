@@ -3784,7 +3784,6 @@ overflow: auto等を追記
 ==================================================*/
 
 .video-player-video,
-.video-player-button,
 .video-player-thumbnail,
 .video-player-time,
 .video-player-comment-button,
@@ -3842,6 +3841,14 @@ color: #007bff;
 
 #commentBox #commentBox-refer {
 color: #ec7532;
+}
+
+.video-player-button {
+background-color: #343a40;
+}
+
+#image-quality {
+float: right;
 }
 
 /*================================================

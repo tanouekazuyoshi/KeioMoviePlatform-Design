@@ -670,6 +670,10 @@ flex: 0 0 75%;
 max-width: 75%;
 }
 
+#keio-movie-single .movie-grid-layout .fa {
+	font-size: initial
+}
+
 }
 
 

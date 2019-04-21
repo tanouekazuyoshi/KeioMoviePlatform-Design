@@ -29,7 +29,7 @@
    <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
 
-<body>
+<body id="keio-movie-single">
 
 
    <!-- Header Area Start -->
@@ -115,47 +115,33 @@
                               <div id="preview-contents"></div>
                            </div>
                         -->
-                  </div>
-                  <div class="single-movie-list-right">
                      <div class="video-player-button">
                         <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                           <label class="btn btn-outline-warning"><input type="radio" aria-hidden="true"
-                                 onclick="playBackChange(0.5) " name="options" id="option6"
-                                 autocomplete="off">x0.5</label>
-                           <label class="btn btn-outline-warning"><input type="radio" aria-hidden="true"
-                                 onclick="playBackChange(0.2) " name="options" id="option5"
-                                 autocomplete="off">x0.2</label>
-                           <label class="btn btn-outline-warning"><input type="radio" aria-hidden="true"
-                                 onclick="playBackChange(0.1) " name="options" id="option4"
-                                 autocomplete="off">x0.1</label>
-                           <label class="btn btn-outline-warning active"><input type="radio" aria-hidden="true"
-                                 onclick="playBackChange(1) " name="options" id="option1" autocomplete="off"
-                                 checked>x1</label>
-                           <label class="btn btn-outline-warning"><input type="radio" aria-hidden="true"
-                                 onclick="playBackChange(2) " name="options" id="option2" autocomplete="off">x2</label>
-                           <label class="btn btn-outline-warning"><input type="radio" aria-hidden="true"
-                                 onclick="playBackChange(5) " name="options" id="option3" autocomplete="off">x5</label>
+                           <label class="btn btn-dark"><input type="radio" aria-hidden="true"
+                                 onclick="playBackChange(0.5) " name="options" id="option6" autocomplete="off"><i
+                                 class="fa fa-backward"></i></label>
+                           <button class="btn btn-dark" aria-hidden="true" onclick="changeScene(-5) "><i
+                                 class="fa fa-step-backward"></i></button>
+                           <label class="btn btn-dark"><input type="radio" aria-hidden="true"
+                                 onclick="playBackChange(1) " name="options" id="option1" autocomplete="off" checked><i
+                                 class="fa fa-play"></i></label>
+                           <button class="btn btn-dark" aria-hidden="true" onclick="changeScene(5) "><i
+                                 class="fa fa-step-forward"></i></button>
+                           <label class="btn btn-dark"><input type="radio" aria-hidden="true"
+                                 onclick="playBackChange(5) " name="options" id="option3" autocomplete="off"><i
+                                 class="fa fa-forward"></i></label>
                         </div>
-                        <div class="btn-group">
-                           <button class="btn btn-outline-info" aria-hidden="true" onclick="changeScene(-1) "><i
-                                 class="fa fa-rotate-left">-1</i></button>
-                           <button class="btn btn-outline-info" aria-hidden="true" onclick="changeScene(-5) "><i
-                                 class="fa fa-rotate-left">-5</i></button>
-                           <button class="btn btn-outline-success" aria-hidden="true" onclick="changeScene(1) "><i
-                                 class="fa fa-rotate-right">+1</i></button>
-                           <button class="btn btn-outline-success" aria-hidden="true" onclick="changeScene(5) "><i
-                                 class="fa fa-rotate-right">+5</i></button>
-                        </div>
-                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                           <label class="btn btn-outline-secondary active"><input type="radio" aria-hidden="true"
+                        <div class="btn-group btn-group-toggle" id="image-quality" data-toggle="buttons">
+                           <label class="btn btn-dark active"><input type="radio" aria-hidden="true"
                                  onclick="changeBitRate('mobile') " name="options" id="option6" autocomplete="off"
                                  checked><i class="fa fa-mobile"></i></label>
-                           <label class="btn btn-outline-secondary"><input type="radio" aria-hidden="true"
+                           <label class="btn btn-dark"><input type="radio" aria-hidden="true"
                                  onclick="changeBitRate('pc') " name="options" id="option5" autocomplete="off"><i
                                  class="fa fa-television"></i></label>
                         </div>
                      </div>
-
+                  </div>
+                  <div class="single-movie-list-right">
                      <div class="details-movie-title">
                         <h5>リーグ戦4回戦慶應義塾大学-日本体育大学</h5>
                      </div>
@@ -198,7 +184,7 @@
                         <div class="commentBox-time">
                            <span id="" class="">00:03:30</span>
                         </div>
-                        <a href="#">
+                        <a href="">
                            <div class="row comment-person">
                               <div class="col-lg-3 comment-picture">
                                  <img src="assets/img/user-icon.jpg" alt="top movie">
@@ -792,7 +778,8 @@
                                  </div>
                                  <div class="col-lg-8">
                                     <p>
-                                       <input type="text" name="uploadTargetCategoryTitle" id="uploadTargetCategoryTitle">
+                                       <input type="text" name="uploadTargetCategoryTitle"
+                                          id="uploadTargetCategoryTitle">
                                     </p>
                                  </div>
                               </div>
