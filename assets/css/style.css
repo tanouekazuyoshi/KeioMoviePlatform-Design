@@ -44,6 +44,7 @@ Version: 1.0
 32 - Single Video Page CSS  <2019.04.12 追加>
 33 - Account page CSS <2019.04.14 追加>
 34 - Account Detail page CSS <2019.04.14 追加>
+35 - badge CSS <2019.05.24 追加>
 */
 
 
@@ -2721,7 +2722,7 @@ display: none;
 .single-movie-list-right h3 {
 	font-size: 16px;
 	text-transform: capitalize;
-	margin-bottom: 5px;
+	margin-bottom: 10px;
 }
 
 .single-movie-list-right h3 a {
@@ -2776,7 +2777,7 @@ display: none;
 }
 
 .movie-grid-layout .single-movie-list-right {
-	padding: 15px;
+	padding: 5px 15px 15px;
 }
 
 .movie-grid-layout.full-grid .single-movie-list-right {
@@ -4325,4 +4326,24 @@ overflow: hidden;
 .switch3__input:checked ~ .switch3__content:after {
 	background-color: rgba(0,150,136,.5);
 	width: 100%;
+}
+
+
+/*================================================
+35 - badge CSS <2019.05.24 追加>
+==================================================*/
+.game-year,
+.game-name {
+	padding: 5px 7px;
+	margin-bottom: 10px;
+	color: white;
+	background-image: linear-gradient(to right, #00c6fb, #005bea);
+}
+
+.game-title {
+	min-height: 38px;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	overflow: hidden;
 }

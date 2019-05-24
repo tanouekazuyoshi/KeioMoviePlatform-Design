@@ -21,6 +21,7 @@ JS INDEX
 08 - Datepicker JS
 09 - Responsive Menu
 10 - Btn To Top
+11 - モーダルのバッジ設定
 
 
 -------------------------------------------------------------------------------------*/
@@ -291,5 +292,55 @@ JS INDEX
 			else $('.btntoTop').removeClass('active');
 		});
 	}
+
+	   /* 
+		=================================================================
+		11 - モーダルのバッジ設定
+		=================================================================	
+		*/
+
+ 
+  //セレクトボックスが切り替わったら発動
+  $('#uploadTargetCategory').change(function() {
+     //選択したvalue値を変数に格納
+    var val = $(this).val();
+     //選択したvalue値をp要素に出力
+    $('#uploadTargetCategoryYearBadge').text(val);
+	});
+	
+  //セレクトボックスが切り替わったら発動
+  $('#uploadTargetGroup').change(function() {
+		//選択したvalue値を変数に格納
+	 var game = $('#uploadTargetGroup option:selected').text();
+
+	 $('#uploadTargetGameBadge').text(game);
+
+	 if(game.indexOf('六大学') !== -1){
+		//選択したvalue値をp要素に出力
+		$('#uploadTargetGameBadge').text('六大学');
+	 }else if(game.indexOf('京王') !== -1){
+		$('#uploadTargetGameBadge').text('電鉄杯');
+	 }else if(game.indexOf('関東大学バスケットボール選手権大会') !== -1){
+		$('#uploadTargetGameBadge').text('トーナメント');
+	 }else if(game.indexOf('慶関') !== -1){
+		$('#uploadTargetGameBadge').text('慶関戦');
+	 }else if(game.indexOf('新人') !== -1){
+		$('#uploadTargetGameBadge').text('新人戦');
+	 }else if(game.indexOf('延世') !== -1){
+		$('#uploadTargetGameBadge').text('慶延戦');
+	 }else if(game.indexOf('早慶') !== -1){
+		$('#uploadTargetGameBadge').text('慶早戦');
+	 }else if(game.indexOf('リーグ') !== -1){
+		$('#uploadTargetGameBadge').text('リーグ戦');
+	 }else if(game.indexOf('全日本学生バスケットボール選手権大会') !== -1){
+		$('#uploadTargetGameBadge').text('インカレ');
+	 }else if(game.indexOf('天皇') !== -1){
+		$('#uploadTargetGameBadge').text('天皇杯');
+	 }
+
+ });
+
+
+
 }(jQuery));
 
