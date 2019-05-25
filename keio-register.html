@@ -27,6 +27,8 @@
    <link rel="stylesheet" href="ext/css/ext.css">
    <!--Responsive css-->
    <link rel="stylesheet" href="assets/css/responsive.css">
+   <!--Datepicker css 2019.05.25追記-->
+   <link rel="stylesheet" href="assets/css/bootstrap-datepicker.min.css">
 </head>
 
 <body id="register-page">
@@ -76,7 +78,8 @@
                      <div class="terms-box">
                         <h4>Keio Unicorns Movie Platform利用規約</h4>
                         <p>第1条 この利用規約について</p>
-                        <p>この利用規約（以下「本規約」といいます。）は、サービス提供者が本サイト上で会員に提供するサービス（以下「本サービス」といいます。）の内容やその申込方法等について定めるものです。本規約の内容の全部又は一部に同意しない方については、本サービスの利用をお断りしますので、本サービスの申込の前に、 必ず本規約の内容を確認してください。</p>
+                        <p>この利用規約（以下「本規約」といいます。）は、サービス提供者が本サイト上で会員に提供するサービス（以下「本サービス」といいます。）の内容やその申込方法等について定めるものです。本規約の内容の全部又は一部に同意しない方については、本サービスの利用をお断りしますので、本サービスの申込の前に、
+                           必ず本規約の内容を確認してください。</p>
                         <br>
                         <p>第2条 定義</p>
                         <p>本規約において使用する用語の意義は、次の各号に定めるとおりとします。<br>
@@ -244,8 +247,8 @@
                         </p>
                         <br>
                      </div>
-                     <div class="terms-checkbox">
-                        <input type="checkbox" id="terms" name="terms">
+                     <div class="form-group terms-checkbox">
+                        <input type="checkbox" id="terms" name="terms" required>
                         <label for="terms">利用規約に同意する</label>
                      </div>
                   </div>
@@ -260,13 +263,13 @@
                               <div class="col-lg-6">
                                  <p>
                                     <label for="ful_name">姓</label>
-                                    <input type="text" name="last_name" id="last_name" placeholder="姓">
+                                    <input type="text" name="last_name" id="last_name" placeholder="姓" required>
                                  </p>
                               </div>
                               <div class="col-lg-6">
                                  <p>
                                     <label for="Email">名</label>
-                                    <input type="text" name="first_name" id="first_name" placeholder="名">
+                                    <input type="text" name="first_name" id="first_name" placeholder="名" required>
                                  </p>
                               </div>
                            </div>
@@ -274,15 +277,18 @@
                               <div class="col-lg-12">
                                  <p>
                                     <label for="Email">メールアドレス</label>
-                                    <input type="email" name="Email" id="Email" placeholder="メールアドレス">
+                                    <input type="email" name="Email" id="Email" placeholder="メールアドレス" required
+                                       pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
                                  </p>
                               </div>
                            </div>
                            <div class="row">
                               <div class="col-lg-12">
                                  <p>
-                                    <label for="password">パスワード</label>
-                                    <input type="password" name="password" id="password" placeholder="パスワード">
+                                    <label
+                                       for="password">パスワード</label><small>（8文字以上、数字、小文字アルファベット、大文字アルファベットが含まれていること）</small>
+                                    <input type="password" name="password" id="password" placeholder="パスワード" required
+                                       pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
                                  </p>
                               </div>
                            </div>
@@ -290,7 +296,8 @@
                               <div class="col-lg-12">
                                  <p>
                                     <label for="password2">パスワード（確認用）</label>
-                                    <input type="password" name="password2" id="password2" placeholder="パスワード（確認用）">
+                                    <input type="password" name="password2" id="password2" placeholder="パスワード（確認用）"
+                                       required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
                                  </p>
                               </div>
                            </div>
@@ -298,7 +305,7 @@
                               <div class="col-lg-12">
                                  <p>
                                     <label for="register_id">登録用ID</label>
-                                    <input type="text" name="register_id" id="register_id" placeholder="登録用ID">
+                                    <input type="text" name="register_id" id="register_id" placeholder="登録用ID" required>
                                  </p>
                               </div>
                            </div>
@@ -336,7 +343,8 @@
                      <ul>
                         <li><a href="#"><i class="fa fa-angle-double-right"></i>about MOVIE PLATFORM</a></li>
                         <li><a href="#"><i class="fa fa-angle-double-right"></i>Terms & Conditions</a></li>
-                        <li><a href="https://endorphins.tokyo/privacy-policy/"><i class="fa fa-angle-double-right"></i>Privacy policy</a></li>
+                        <li><a href="https://endorphins.tokyo/privacy-policy/"><i
+                                 class="fa fa-angle-double-right"></i>Privacy policy</a></li>
                      </ul>
                   </div>
                </div>
@@ -370,8 +378,9 @@
    <script src="assets/js/jquery.magnific-popup.min.js"></script>
    <!--Main js-->
    <script src="assets/js/main.js"></script>
-   <!--ext.js 2019.02.05追記-->
-   <script src="ext/js/ext.js"></script>
+   <!--Datepicker js-->
+   <script src="assets/js/bootstrap-datepicker.min.js"></script>
+   <script src="assets/js/bootstrap-datepicker.ja.min.js"></script>
 </body>
 
 </html>

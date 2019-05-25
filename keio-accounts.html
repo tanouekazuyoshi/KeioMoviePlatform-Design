@@ -27,6 +27,8 @@
    <link rel="stylesheet" href="ext/css/ext.css">
    <!--Responsive css-->
    <link rel="stylesheet" href="assets/css/responsive.css">
+   <!--Datepicker css 2019.05.25追記-->
+   <link rel="stylesheet" href="assets/css/bootstrap-datepicker.min.css">
 </head>
 
 <body>
@@ -1154,9 +1156,14 @@
                                        <label for="editPageTitle">名前</label>
                                     </p>
                                  </div>
-                                 <div class="col-lg-6">
+                                 <div class="col-lg-3">
                                     <p>
-                                       <input type="text" name="editPageTitle" id="editPageTitle">
+                                       <input type="text" name="editLastName" id="editLastName" required>
+                                    </p>
+                                 </div>
+                                 <div class="col-lg-3">
+                                    <p>
+                                       <input type="text" name="editFirstName" id="editFirstName" required>
                                     </p>
                                  </div>
                                  <div class="col-lg-2">
@@ -1173,7 +1180,7 @@
                                  </div>
                                  <div class="col-lg-6">
                                     <p>
-                                       <input type="text" name="editPagePosition" id="editPageRole">
+                                       <input type="text" name="editPagePosition" id="editPageRole" required>
                                     </p>
                                  </div>
                                  <div class="col-lg-2">
@@ -1190,7 +1197,8 @@
                                  </div>
                                  <div class="col-lg-6">
                                     <p>
-                                       <input type="file" name="editPageImage" id="editPageImage" accept="image/*">
+                                       <input type="file" class="form-control-file" name="editPageImage"
+                                          id="editPageImage" accept="image/*" required>
                                        <img src="assets/img/player270.jpg" id="editPageImagePreview" alt="">
                                     </p>
                                  </div>
@@ -1202,10 +1210,45 @@
                               </div>
                               <div class="row">
                                  <div class="col-lg-4">
+                                    <p><label for="editPageDetailValue_0">アカウントカテゴリー</label></p>
+                                 </div>
+                                 <div class="col-lg-6">
+                                    <p>
+                                       <select name="editPageDetailValue_0" id="editPageDetailValue_0" size="1"
+                                          required>
+                                          <option value="create">新しいカテゴリーを作成する</option>
+                                          <option value="acctount2019">現役生</option>
+                                          <option value="acctount2018">2018年度-主将/鳥羽</option>
+                                          <option value="acctount2017">2017年度-主将/サワ</option>
+                                          <option value="acctount2016">2016年度-主将/西戸</option>
+                                          <option value="acctount2015">2015年度-主将/福元</option>
+                                          <option value="acctount2014">2014年度-主将/伊藤</option>
+                                          <option value="acctount2013">2013年度-主将/海老名</option>
+                                          <option value="acctount2012">2012年度-主将/桂</option>
+                                          <option value="acctount2011">2011年度-主将/家治</option>
+                                          <option value="acctount2010">2010年度-主将/二ノ宮</option>
+                                          <option value="acctount2009">2009年度-主将/田上</option>
+                                          <option value="acctount2008">2008年度-主将/鈴木</option>
+                                          <option value="acctount2007">2007年度-主将/加藤</option>
+                                          <option value="acctount2006">2006年度-主将/酒井</option>
+                                          <option value="acctount2005">2005年度-主将/醍醐</option>
+                                          <option value="acctount2004">2004年度-主将/志村</option>
+                                          <option value="acctount2003">2003年度-主将/園</option>
+                                          <option value="acctount2002">2002年度-主将/佐藤</option>
+                                       </select>
+                                    </p>
+                                 </div>
+                                 <div class="col-lg-2">
+                                    <p><button class="btn btn-primary" id="confirmEditPageAccount">保存する</label></p>
+                                 </div>
+                              </div>
+                              <div class="row">
+                                 <div class="col-lg-4">
                                     <p><label for="editPageDetailValue_1">学年</label></p>
                                  </div>
                                  <div class="col-lg-6">
-                                    <p><input type="text" name="editPageDetailValue_1" id="editPageDetailValue_1"></p>
+                                    <p><input type="text" name="editPageDetailValue_1" id="editPageDetailValue_1"
+                                          required></p>
                                  </div>
                                  <div class="col-lg-2">
                                     <p><button class="btn btn-primary" id="confirmEditPagegrade">保存する</label></p>
@@ -1216,7 +1259,8 @@
                                     <p><label for="editPageDetailValue_2">ポジション</label></p>
                                  </div>
                                  <div class="col-lg-6">
-                                    <p><input type="text" name="editPageDetailValue_2" id="editPageDetailValue_2"></p>
+                                    <p><input type="text" name="editPageDetailValue_2" id="editPageDetailValue_2"
+                                          required></p>
                                  </div>
                                  <div class="col-lg-2">
                                     <p><button class="btn btn-primary" id="confirmEditPagePosition">保存する</label></p>
@@ -1227,7 +1271,8 @@
                                     <p><label for="editPageDetailValue_3">身長</label></p>
                                  </div>
                                  <div class="col-lg-6">
-                                    <p><input type="text" name="editPageDetailValue_3" id="editPageDetailValue_3"></p>
+                                    <p><input type="text" name="editPageDetailValue_3" id="editPageDetailValue_3"
+                                          required></p>
                                  </div>
                                  <div class="col-lg-2">
                                     <p><button class="btn btn-primary" id="confirmEditPageHeight">保存する</label></p>
@@ -1238,7 +1283,8 @@
                                     <p><label for="editPageDetailValue_4">体重</label></p>
                                  </div>
                                  <div class="col-lg-6">
-                                    <p><input type="text" name="editPageDetailValue_4" id="editPageDetailValue_4"></p>
+                                    <p><input type="text" name="editPageDetailValue_4" id="editPageDetailValue_4"
+                                          required></p>
                                  </div>
                                  <div class="col-lg-2">
                                     <p><button class="btn btn-primary" id="confirmEditPageWeight">保存する</label></p>
@@ -1249,7 +1295,8 @@
                                     <p><label for="editPageDetailValue_5">血液型</label></p>
                                  </div>
                                  <div class="col-lg-6">
-                                    <p><input type="text" name="editPageDetailValue_5" id="editPageDetailValue_5"></p>
+                                    <p><input type="text" name="editPageDetailValue_5" id="editPageDetailValue_5"
+                                          required></p>
                                  </div>
                                  <div class="col-lg-2">
                                     <p><button class="btn btn-primary" id="confirmEditPageBloodtype">保存する</label></p>
@@ -1260,7 +1307,8 @@
                                     <p><label for="editPageDetailValue_6">学部</label></p>
                                  </div>
                                  <div class="col-lg-6">
-                                    <p><input type="text" name="editPageDetailValue_6" id="editPageDetailValue_6"></p>
+                                    <p><input type="text" name="editPageDetailValue_6" id="editPageDetailValue_6"
+                                          required></p>
                                  </div>
                                  <div class="col-lg-2">
                                     <p><button class="btn btn-primary" id="confirmEditPageUndergraduate">保存する</label>
@@ -1272,7 +1320,8 @@
                                     <p><label for="editPageDetailValue_7">出身高校</label></p>
                                  </div>
                                  <div class="col-lg-6">
-                                    <p><input type="text" name="editPageDetailValue_7" id="editPageDetailValue_7"></p>
+                                    <p><input type="text" name="editPageDetailValue_7" id="editPageDetailValue_7"
+                                          required></p>
                                  </div>
                                  <div class="col-lg-2">
                                     <p><button class="btn btn-primary" id="confirmEditPageHeigschool">保存する</label></p>
@@ -1313,7 +1362,7 @@
                                  </div>
                                  <div class="col-lg-8">
                                     <p>
-                                       <select name="editAccountsCategory" id="editAccountsCategory" size="1">
+                                       <select name="editAccountsCategory" id="editAccountsCategory" size="1" required>
                                           <option value="create">新しいカテゴリーを作成する</option>
                                           <option value="acctount2019">現役生</option>
                                           <option value="acctount2018">2018年度-主将/鳥羽</option>
@@ -1346,7 +1395,7 @@
                                  <div class="col-lg-8">
                                     <p>
                                        <input type="text" name="currentAccountsCategoryTitle"
-                                          id="currentAccountsCategoryTitle">
+                                          id="currentAccountsCategoryTitle" required>
                                     </p>
                                  </div>
                               </div>
@@ -1358,7 +1407,8 @@
                                  </div>
                                  <div class="col-lg-8">
                                     <p>
-                                       <input type="text" name="newAccountsCategoryTitle" id="newAccountsCategoryTitle">
+                                       <input type="text" name="newAccountsCategoryTitle" id="newAccountsCategoryTitle"
+                                          required>
                                     </p>
                                  </div>
                               </div>
@@ -1399,7 +1449,7 @@
                                  </div>
                                  <div class="col-lg-8">
                                     <p>
-                                       <select name="editArchivesCategory" id="editArchivesCategory" size="1">
+                                       <select name="editArchivesCategory" id="editArchivesCategory" size="1" required>
                                           <option value="create">新しいカテゴリーを作成する</option>
                                           <option value="2019">2019年度-主将/山崎</option>
                                           <option value="2018">2018年度-主将/鳥羽</option>
@@ -1432,7 +1482,7 @@
                                  <div class="col-lg-8">
                                     <p>
                                        <input type="text" name="currentArchivesCategoryTitle"
-                                          id="currentArchivesCategoryTitle">
+                                          id="currentArchivesCategoryTitle" required>
                                     </p>
                                  </div>
                               </div>
@@ -1444,7 +1494,8 @@
                                  </div>
                                  <div class="col-lg-8">
                                     <p>
-                                       <input type="text" name="newArchivesCategoryTitle" id="newArchivesCategoryTitle">
+                                       <input type="text" name="newArchivesCategoryTitle" id="newArchivesCategoryTitle"
+                                          required>
                                     </p>
                                  </div>
                               </div>
@@ -1486,15 +1537,18 @@
                                  <div class="col-lg-8">
                                     <p>
                                        <select name="editArchivesDetailCategory" id="editArchivesDetailCategory"
-                                          size="1">
+                                          size="1" required>
                                           <option value="create">新しいカテゴリーを作成する</option>
-                                          <option value="95kantoleague">第95回関東大学バスケットボールリーグ戦</option>
-                                          <option value="77sokei">第77回早慶バスケットボール定期戦</option>
-                                          <option value="12keiyon">第12回慶應義塾大学・延世大学校バスケットボール定期戦</option>
-                                          <option value="59kantoshinjin">第59回関東大学バスケットボール新人戦</option>
-                                          <option value="87keikan">第87回慶関バスケットボール定期戦</option>
-                                          <option value="68kantotournament">第68回関東大学バスケットボール選手権大会</option>
-                                          <option value="35keiodentetsu">第35回京王電鉄杯</option>
+                                          <option value="tennohai">天皇杯全日本バスケットボール選手権大会</option>
+                                          <option value="intercollage">全日本学生バスケットボール選手権大会</option>
+                                          <option value="league">関東大学バスケットボールリーグ戦</option>
+                                          <option value="sokeisen">早慶バスケットボール定期戦</option>
+                                          <option value="keiyonsen">慶應義塾大学・延世大学校バスケットボール定期戦</option>
+                                          <option value="kantoshinjin">関東大学バスケットボール新人戦</option>
+                                          <option value="keikansen">慶関バスケットボール定期戦</option>
+                                          <option value="kantotournament">関東大学バスケットボール選手権大会</option>
+                                          <option value="dentetsuhai">京王電鉄杯</option>
+                                          <option value="rokudaigaku">東京六大学バスケットボールリーグ戦</option>
                                        </select>
                                     </p>
                                  </div>
@@ -1508,7 +1562,7 @@
                                  <div class="col-lg-8">
                                     <p>
                                        <input type="text" name="currentArchivesDetailCategoryTitle"
-                                          id="currentArchivesDetailCategoryTitle">
+                                          id="currentArchivesDetailCategoryTitle" required>
                                     </p>
                                  </div>
                               </div>
@@ -1521,7 +1575,7 @@
                                  <div class="col-lg-8">
                                     <p>
                                        <input type="text" name="newArchivesDetailCategoryTitle"
-                                          id="newArchivesDetailCategoryTitle">
+                                          id="newArchivesDetailCategoryTitle" required>
                                     </p>
                                  </div>
                               </div>
@@ -1563,7 +1617,7 @@
                                  <div class="col-lg-8">
                                     <p>
                                        <input type="file" class="form-control-file" multiple="multiple"
-                                          name="uploadFile" id="uploadFile">
+                                          name="uploadFile" id="uploadFile" required>
                                     </p>
                                  </div>
                               </div>
@@ -1575,7 +1629,7 @@
                                  </div>
                                  <div class="col-lg-8">
                                     <p>
-                                       <select name="uploadTargetCategory" id="uploadTargetCategory" size="1">
+                                       <select name="uploadTargetCategory" id="uploadTargetCategory" size="1" required>
                                           <option value="create">新しいカテゴリーを追加する</option>
                                           <option value="2019">2019年度-主将/山崎</option>
                                           <option value="2018">2018年度-主将/鳥羽</option>
@@ -1606,7 +1660,8 @@
                                     </p>
                                  </div>
                                  <div class="col-lg-8">
-                                    <input type="text" name="uploadTargetCategoryTitle" id="uploadTargetCategoryTitle">
+                                    <input type="text" name="uploadTargetCategoryTitle" id="uploadTargetCategoryTitle"
+                                       required>
                                  </div>
                               </div>
                               <div class="row">
@@ -1627,15 +1682,18 @@
                                  </div>
                                  <div class="col-lg-8">
                                     <p>
-                                       <select name="uploadTargetGroup" id="uploadTargetGroup" size="1">
-                                          <option value="create">新しいグループを追加する</option>
-                                          <option value="95kantoleague">第95回関東大学バスケットボールリーグ戦</option>
-                                          <option value="77sokei">第77回早慶バスケットボール定期戦</option>
-                                          <option value="12keiyon">第12回慶應義塾大学・延世大学校バスケットボール定期戦</option>
-                                          <option value="59kantoshinjin">第59回関東大学バスケットボール新人戦</option>
-                                          <option value="87keikan">第87回慶関バスケットボール定期戦</option>
-                                          <option value="68kantotournament">第68回関東大学バスケットボール選手権大会</option>
-                                          <option value="35keiodentetsu">第35回京王電鉄杯</option>
+                                       <select name="uploadTargetGroup" id="uploadTargetGroup" size="1" required>
+                                          <option value="create">新しいカテゴリーを作成する</option>
+                                          <option value="tennohai">天皇杯全日本バスケットボール選手権大会</option>
+                                          <option value="intercollage">全日本学生バスケットボール選手権大会</option>
+                                          <option value="league">関東大学バスケットボールリーグ戦</option>
+                                          <option value="sokeisen">早慶バスケットボール定期戦</option>
+                                          <option value="keiyonsen">慶應義塾大学・延世大学校バスケットボール定期戦</option>
+                                          <option value="kantoshinjin">関東大学バスケットボール新人戦</option>
+                                          <option value="keikansen">慶関バスケットボール定期戦</option>
+                                          <option value="kantotournament">関東大学バスケットボール選手権大会</option>
+                                          <option value="dentetsuhai">京王電鉄杯</option>
+                                          <option value="rokudaigaku">東京六大学バスケットボールリーグ戦</option>
                                        </select>
                                     </p>
                                  </div>
@@ -1648,7 +1706,8 @@
                                  </div>
                                  <div class="col-lg-8">
                                     <p>
-                                       <input type="text" name="uploadTargetGroupTitle" id="uploadTargetGroupTitle">
+                                       <input type="text" name="uploadTargetGroupTitle" id="uploadTargetGroupTitle"
+                                          required>
                                     </p>
                                  </div>
                               </div>
@@ -1670,7 +1729,7 @@
                                  </div>
                                  <div class="col-lg-8">
                                     <p>
-                                       <input type="text" name="uploadTitle" id="uploadTitle">
+                                       <input type="text" name="uploadTitle" id="uploadTitle" required>
                                     </p>
                                  </div>
                               </div>
@@ -1683,7 +1742,7 @@
                                  <div class="col-lg-8">
                                     <p>
                                        <textarea type="text" name="uploadContents" id="uploadContents" rows="5"
-                                          cols="60"></textarea>
+                                          cols="60" required></textarea>
                                     </p>
                                  </div>
                               </div>
@@ -1723,8 +1782,9 @@
                                  </div>
                                  <div class="col-lg-8">
                                     <p>
-                                       <input type="text" name="viewingKeyInviteMailInvite"
-                                          id="viewingKeyInviteMailInvite">
+                                       <input type="email" name="viewingKeyInviteMailInvite"
+                                          id="viewingKeyInviteMailInvite" required
+                                          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
                                     </p>
                                  </div>
                               </div>
@@ -1738,7 +1798,7 @@
                                     <div class="row">
                                        <div class="col-lg-2">
                                           <p>
-                                             <select name="viewingKeyInviteRoll" id="viewingKeyInviteRoll">
+                                             <select name="viewingKeyInviteRoll" id="viewingKeyInviteRoll" required>
                                                 <option value="user" default>閲覧のみ</option>
                                                 <option value="editor">編集可</option>
                                                 <option value="manager">管理者</option>
@@ -1762,12 +1822,8 @@
                                  <div class="col-lg-8">
                                     <p>
                                        <input type="text" name="viewingKeyInviteExpire" id="viewingKeyInviteExpire"
-                                          class="hasDatepicker">
+                                          class="hasDatepicker" required>
                                     </p>
-                                    <p>
-                                       <button type="button" class="ui-datepicker-trigger">カレンダーから選択</button>
-                                    </p>
-                                    <p class="exp-exp"><small>期限を設けない場合は『20990101』を記入ください。</small></p>
                                  </div>
                               </div>
                               <div class="row">
@@ -1778,9 +1834,12 @@
                                  </div>
                                  <div class="col-lg-8">
                                     <p>
-                                       <input type="text" name="viewingKeyInviteKeyword" id="viewingKeyInviteKeyword">
+                                       <input type="text" name="viewingKeyInviteKeyword" id="viewingKeyInviteKeyword"
+                                          required>
                                     </p>
-                                    <p class="id-exp"><small>登録IDを発行したい場合は事務局（H22卒/田上）までお問い合わせください。</small></p>
+                                    <p class="id-exp">
+                                       <small>登録IDを発行したい場合は事務局（H22卒/田上：contact@endorphins.tokyo）までお問い合わせください。</small>
+                                    </p>
                                  </div>
                               </div>
                               <div class="row">
@@ -1792,7 +1851,7 @@
                                  <div class="col-lg-8">
                                     <p>
                                        <textarea type="text" name="viewingKeyInviteMessage" id="viewingKeyInviteMessage"
-                                          rows="5" cols="60"></textarea>
+                                          rows="5" cols="60" required></textarea>
                                     </p>
                                  </div>
                               </div>
@@ -1846,7 +1905,7 @@
                                  <div class="col-lg-8">
                                     <p>
                                        <textarea type="text" name="commentTimeCommentContents"
-                                          id="commentTimeCommentContents" rows="5" cols="60"></textarea>
+                                          id="commentTimeCommentContents" rows="5" cols="60" required></textarea>
                                     </p>
                                  </div>
                               </div>
@@ -1878,6 +1937,9 @@
    <script src="assets/js/jquery.slicknav.min.js"></script>
    <!--Magnific js-->
    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+   <!--Datepicker js-->
+   <script src="assets/js/bootstrap-datepicker.min.js"></script>
+   <script src="assets/js/bootstrap-datepicker.ja.min.js"></script>
    <!--Main js-->
    <script src="assets/js/main.js"></script>
 </body>
