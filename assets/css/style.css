@@ -45,6 +45,7 @@ Version: 1.0
 33 - Account page CSS <2019.04.14 追加>
 34 - Account Detail page CSS <2019.04.14 追加>
 35 - badge CSS <2019.05.24 追加>
+36 - アコーディオンリスト CSS  <2019.05.27　追加>
 */
 
 
@@ -2348,38 +2349,6 @@ display: none;
 	display: block;
 }
 
-.cp_menu ul,
-.player_account_menu ul,
-.staff_account_menu ul {
-	display: none;
-	list-style: none;
-	margin: 0;
-	padding: 0 0 0.5rem 0.5rem;
-}
-
-.cp_menu label,
-.player_account_menu label,
-.staff_account_menu label {
-	display: block;
-	position: relative;
-	margin: 0;
-	padding: 0.5rem 0;
-	cursor: pointer;
-	margin: 0 0 2px 0;
-	line-height: 1;
-	cursor: pointer;
-}
-
-.cp_menu label::before,
-.player_account_menu label::before,
-.staff_account_menu label::before {
-	position: absolute;
-	content: '▼';
-	color: #737373;
-	right: 1em;
-	top: 25%;
-}
-
 /*2019.04.08 追記*/
 .cp_menu {
 	overflow-y: auto;
@@ -2393,7 +2362,7 @@ display: none;
 
 .staff_account_wrap {
 	overflow-y: auto;
-	height: 50px;
+	height: 100px;
 }
 
 /*================================================
@@ -4346,4 +4315,28 @@ overflow: hidden;
 	-webkit-box-orient: vertical;
 	-webkit-line-clamp: 2;
 	overflow: hidden;
+}
+
+/*================================================
+36 - アコーディオンリスト CSS  <2019.05.27　追加>
+==================================================*/
+
+.list-sidebar .single-sidebar-widget .accordion .card {
+	border: none;
+}
+
+.list-sidebar .single-sidebar-widget .accordion .card .card-header {
+	border: none;
+	padding: 0.75rem 0rem;
+}
+
+.list-sidebar .single-sidebar-widget .accordion .card .list-group-item {
+	padding: 0.1rem 0.3rem;
+	margin-bottom: initial;
+	background-color:#f9f9f9;
+	border: none;
+}
+
+.list-sidebar .single-sidebar-widget .accordion h5{
+	font-size: initial;
 }
